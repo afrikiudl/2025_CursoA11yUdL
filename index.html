@@ -68,10 +68,320 @@
                 <header>
                     <h2>Programa</h2>
                 </header>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia, nulla nisi provident aperiam est corporis consectetur at magni sit? Quia unde numquam quos rem voluptas possimus ipsam, aperiam dolor?</p>
-                <footer>
-                    <p>Pie de la sección de programa.</p>
-                </footer>
+
+                <section class="container pb-5">
+                    <!-- Navegación rápida -->
+                    <nav aria-label="Acceso rápido a módulos" class="mb-5">
+                      <h2 class="h4 mb-3">Acceso rápido a los módulos</h2>
+                      <div class="row g-3">
+                        <div class="col-md-3">
+                          <button class="btn btn-outline-primary w-100 module-btn"
+                                  data-bs-toggle="collapse" data-bs-target="#modulo1"
+                                  aria-expanded="false" aria-controls="modulo1">
+                            Módulo 1 <wbr> Fundamentos
+                          </button>
+                        </div>
+                        <div class="col-md-3">
+                          <button class="btn btn-outline-primary w-100 module-btn"
+                                  data-bs-toggle="collapse" data-bs-target="#modulo2"
+                                  aria-expanded="false" aria-controls="modulo2">
+                            Módulo 2 <wbr> Diseño
+                          </button>
+                        </div>
+                        <div class="col-md-3">
+                          <button class="btn btn-outline-primary w-100 module-btn"
+                                  data-bs-toggle="collapse" data-bs-target="#modulo3"
+                                  aria-expanded="false" aria-controls="modulo3">
+                            Módulo 3 <wbr> Codificación
+                          </button>
+                        </div>
+                        <div class="col-md-3">
+                          <button class="btn btn-outline-primary w-100 module-btn"
+                                  data-bs-toggle="collapse" data-bs-target="#modulo4"
+                                  aria-expanded="false" aria-controls="modulo4">
+                            Módulo 4 <wbr> Evaluación
+                          </button>
+                        </div>
+                      </div>
+                    </nav>
+                
+                    <!-- Contenido detallado -->
+                    <section aria-labelledby="contenido-detallado">
+                      <h2 id="contenido-detallado" class="h4 mb-3">Contenido detallado</h2>
+                
+                      <div class="accordion" id="accordionCurso">
+                
+                        <!-- Módulo 1 -->
+                        <article class="accordion-item">
+                          <h3 class="accordion-header" id="heading1">
+                            <button class="accordion-button collapsed" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#modulo1" 
+                                    aria-expanded="false" aria-controls="modulo1">
+                              Módulo 1. Fundamentos en Accesibilidad Digital
+                            </button>
+                          </h3>
+                          <div id="modulo1" class="accordion-collapse collapse" 
+                               aria-labelledby="heading1" data-bs-parent="#accordionCurso">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                      Clase 0. Presentación del curso
+                                      <ul>
+                                        <li>0.1 Presentación del curso (módulos, profesores y Campus Virtual)</li>
+                                        <li>0.2 Presentación de los alumnos</li>
+                                        <li>0.3 Material en CV para consultar</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 1. Introducción a la accesibilidad y la discapacidad
+                                      <ul>
+                                        <li>1.1 Introducción a la accesibilidad web</li>
+                                        <li>1.2 Definición de conceptos básicos relacionados con la accesibilidad web</li>
+                                        <li>1.3 Discapacidad, modelos de discapacidad</li>
+                                        <li>1.4 Tipos de discapacidad: visual, auditiva, motriz, cognitiva y otras limitaciones</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 2. Tecnologías de asistencia y barreras frecuentes (I)
+                                      <ul>
+                                        <li>2.1 Tecnologías de asistencia relacionadas con diferentes tipos de discapacidad: movilidad y visión</li>
+                                        <li>2.2 Barreras relacionadas</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 3. Tecnologías de asistencia y barreras frecuentes (II)
+                                      <ul>
+                                        <li>3.1 Tecnologías de asistencia relacionadas con diferentes tipos de discapacidad: audición y cognición</li>
+                                        <li>3.2 Barreras relacionadas</li>
+                                        <li>3.3 El papel de la IA en la accesibilidad: aplicación en la generación de perfiles de usuario</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 4. Normativas de accesibilidad e introducción a la evaluación web
+                                      <ul>
+                                        <li>4.1 Normativa fundamental en accesibilidad</li>
+                                        <li>4.2 Introducción a las WCAG 2.2</li>
+                                        <li>4.3 Introducción a la evaluación de accesibilidad: el papel de las herramientas de detección automática</li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                              </div>
+                          </div>
+                        </article>
+                
+                        <!-- Módulo 2 -->
+                        <article class="accordion-item">
+                          <h3 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#modulo2" 
+                                    aria-expanded="false" aria-controls="modulo2">
+                              Módulo 2. Diseño
+                            </button>
+                          </h3>
+                          <div id="modulo2" class="accordion-collapse collapse" 
+                               aria-labelledby="heading2" data-bs-parent="#accordionCurso">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                      Clase 1. Introducción al diseño
+                                      <ul>
+                                        <li>1.1. Diseño de la interacción</li>
+                                        <li>1.2. Introducción al wireframe low-fi y sistemas de diseño</li>
+                                        <li>1.3. Arquitectura de la información</li>
+                                        <li>1.4. Afectación de la accesibilidad en el diseño digital</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 2. Organización de proyectos y Fundations I
+                                      <ul>
+                                        <li>2.1. Sistemas de diseño y afectación en accesibilidad</li>
+                                        <li>2.2. Cómo aplican la accesibilidad grandes empresas en sus sistemas de diseño</li>
+                                        <li>2.3. Fundations I: Color</li>
+                                        <li>2.4. Fundations II: Tipografía</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 3. Fundations II y componentes
+                                      <ul>
+                                        <li>3.1. Fundations III: Iconografía</li>
+                                        <li>3.2. Fundations IV: Diseño visual y arquitectura</li>
+                                        <li>3.3. Componentes: Información sistemática</li>
+                                        <li>3.4. Patrones y pantallas</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 4. Formularios y elementos de interacción
+                                      <ul>
+                                        <li>4.1. Componentes: Formularios</li>
+                                        <li>4.2. Elementos de interacción (botones, enlaces, navegación...)</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 5. Evaluación Figma
+                                      <ul>
+                                        <li>5.1. Herramientas y plugins de accesibilidad</li>
+                                        <li>5.2. Documentación del sistema de diseño</li>
+                                        <li>5.3. Anotaciones en componentes, patrones y pantallas</li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                  
+                            </div>
+                          </div>
+                        </article>
+                
+                        <!-- Módulo 3 -->
+                        <article class="accordion-item">
+                          <h3 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#modulo3" 
+                                    aria-expanded="false" aria-controls="modulo3">
+                              Módulo 3. Codificación
+                            </button>
+                          </h3>
+                          <div id="modulo3" class="accordion-collapse collapse" 
+                               aria-labelledby="heading3" data-bs-parent="#accordionCurso">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                      Clase 1. Introducción a la codificación
+                                      <ul>
+                                        <li>1.1. Introducción HTML5, CSS y Javascript</li>
+                                        <li>1.2. Estructura de un documento HTML semántico</li>
+                                        <li>1.3. Árbol de accesibilidad</li>
+                                        <li>1.4. Landmarks, encabezados, enlaces, imágenes, listas</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 2. Contenido básico
+                                      <ul>
+                                        <li>2.1. Tablas</li>
+                                        <li>2.2. Formularios</li>
+                                        <li>2.3. Imágenes funcionales y gráficos</li>
+                                        <li>2.4. Validación de código</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 3. CSS y accesibilidad
+                                      <ul>
+                                        <li>3.1. Fuentes, interlineados, longitud de línea, colores</li>
+                                        <li>3.2. Manejo del foco de teclado</li>
+                                        <li>3.3. Responsive web design</li>
+                                        <li>3.4. Movimiento y animación</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 4. WAI-ARIA (básico)
+                                      <ul>
+                                        <li>4.1. JavaScript. Fundamentos. DOM.</li>
+                                        <li>4.2. Introducción a WAI-ARIA: roles, propiedades y estados</li>
+                                        <li>4.3. Trabajo con elementos interactivos</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 5. WAI-ARIA (avanzado)
+                                      <ul>
+                                        <li>
+                                          5.1. Desarrollo de elementos interactivos
+                                          <ul>
+                                            <li>5.1.1. Pestañas o tabs</li>
+                                            <li>5.1.2. Ventanas modales</li>
+                                            <li>5.1.3. Acordeón</li>
+                                            <li>5.1.4. Tablists</li>
+                                            <li>5.1.5. Carrusel</li>
+                                          </ul>
+                                        </li>
+                                        <li>5.2. Uso de herramientas IA para generar código accesible</li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                  
+                            </div>
+                          </div>
+                        </article>
+                
+                        <!-- Módulo 4 -->
+                        <article class="accordion-item">
+                          <h3 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#modulo4" 
+                                    aria-expanded="false" aria-controls="modulo4">
+                              Módulo 4. Evaluación
+                            </button>
+                          </h3>
+                          <div id="modulo4" class="accordion-collapse collapse" 
+                               aria-labelledby="heading4" data-bs-parent="#accordionCurso">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                      Clase 1. Introducción a la evaluación
+                                      <ul>
+                                        <li>1.1. Metodología WCAG-EM</li>
+                                        <li>1.2. Empleo de herramientas basadas en inteligencia artificial para apoyar el proceso de evaluación</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 2. Evaluación caso práctico (I). Perceptible
+                                      <ul>
+                                        <li>2. Validación del principio: Perceptible</li>
+                                        <li>2.1. Uso de herramientas de evaluación automáticas y semiautomáticas</li>
+                                        <li>2.2. Pruebas complementarias (simulación o pruebas de usuario)</li>
+                                        <li>2.3. Empleo de herramientas basadas en inteligencia artificial para apoyar el proceso de evaluación</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 3. Evaluación caso práctico (II). Operable
+                                      <ul>
+                                        <li>3. Validación del principio: Operable</li>
+                                        <li>3.1. Uso de herramientas de evaluación automáticas y semiautomáticas</li>
+                                        <li>3.2. Pruebas complementarias (simulación o pruebas de usuario)</li>
+                                        <li>3.3. Empleo de herramientas basadas en inteligencia artificial para apoyar el proceso de evaluación</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 4. Evaluación caso práctico (III). Comprensible y robusto
+                                      <ul>
+                                        <li>4. Validación del principio: Comprensible y Robusto</li>
+                                        <li>4.1. Uso de herramientas de evaluación automáticas y semiautomáticas</li>
+                                        <li>4.2. Pruebas complementarias (simulación o pruebas de usuario)</li>
+                                        <li>4.3. Empleo de herramientas basadas en inteligencia artificial para apoyar el proceso de evaluación</li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      Clase 5. Informe final y declaración de accesibilidad
+                                      <ul>
+                                        <li>5.1. Validación de criterios complementarios (UNE EN 301549 según el marco regulador de España)</li>
+                                        <li>5.2. Redacción del informe final de evaluación de accesibilidad</li>
+                                        <li>5.3. Redacción de la declaración de accesibilidad</li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                  
+                            </div>
+                          </div>
+                        </article>
+                
+                      </div>
+                    </section>
+                
+                </section>
+
             </article>
         </section>
 
@@ -168,7 +478,25 @@
                 <header>
                     <h2>Calendario</h2>
                 </header>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia, nulla nisi provident aperiam est corporis consectetur at magni sit? Quia unde numquam quos rem voluptas possimus ipsam, aperiam dolor?</p>
+                <section class="container">
+                <h3>Calendario en imagenes</h3>
+                <p>Clases síncronas:</p>
+                <ul>
+                 <li>Clase de bienvenida: 29 de septiembre, se celebrará la clase 0 para todos los alumnos del curso y módulos relacionados.</li>
+                 <li>Módulo de Fundamentos: 2, 6, 9, 13 octubre</li>
+                 <li>Módulo de Diseño: 20. 23, 27, 30 octubre y 3 de noviembre. </li>
+                 <li>Módulo de Codificación: 10, 13, 17, 20, 24 noviembre </li>
+                 <li>Módulo de Evaluación: 1, 4, 11, 15, 18 de diciembre </li>
+                 <li>Sesión invitada: El día 22 de diciembre, habrá una sesión sobre la importancia de la accesibilidad por parte de una empresa relevante en el área de accesibilidad digital
+                </ul>
+                <img src="/img/octubre2025.jpg" class="img-fluid" alt="">
+                
+                <img src="/img/noviembre2025.jpg" class="img-fluid" alt="">
+                <img src="/img/diciembre2025.jpg" class="img-fluid" alt="">
+
+                <h3>Calendario en iframe google</h3>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FMadrid&showPrint=0&src=YXByZW5kZWFjY2VzaWJpbGlkYWRAZ21haWwuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%230b8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                </section>
                 <footer>
                     <p>Pie de la sección de programa.</p>
                 </footer>

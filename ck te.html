@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Curso de Especialización en Accesibilidad Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .module-btn {
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <header class="container py-5">
+    <h1 class="mb-4 text-primary">Curso de Especialización en Accesibilidad Digital</h1>
+  </header>
+
+  <main class="container pb-5">
+
+    <!-- Navegación rápida -->
+    <nav aria-label="Acceso rápido a módulos" class="mb-5">
+      <h2 class="h4 mb-3">Acceso rápido a los módulos</h2>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <button class="btn btn-outline-primary w-100 module-btn"
+                  data-bs-toggle="collapse" data-bs-target="#modulo1"
+                  aria-expanded="false" aria-controls="modulo1">
+            Módulo 1 <wbr> Fundamentos
+          </button>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-outline-primary w-100 module-btn"
+                  data-bs-toggle="collapse" data-bs-target="#modulo2"
+                  aria-expanded="false" aria-controls="modulo2">
+            Módulo 2 <wbr> Diseño
+          </button>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-outline-primary w-100 module-btn"
+                  data-bs-toggle="collapse" data-bs-target="#modulo3"
+                  aria-expanded="false" aria-controls="modulo3">
+            Módulo 3 <wbr> Codificación
+          </button>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-outline-primary w-100 module-btn"
+                  data-bs-toggle="collapse" data-bs-target="#modulo4"
+                  aria-expanded="false" aria-controls="modulo4">
+            Módulo 4 <wbr> Evaluación
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido detallado -->
+    <section aria-labelledby="contenido-detallado">
+      <h2 id="contenido-detallado" class="h4 mb-3">Contenido detallado</h2>
+
+      <div class="accordion" id="accordionCurso">
+
+        <!-- Módulo 1 -->
+        <article class="accordion-item">
+          <h3 class="accordion-header" id="heading1">
+            <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#modulo1" 
+                    aria-expanded="false" aria-controls="modulo1">
+              Módulo 1. Fundamentos en Accesibilidad Digital
+            </button>
+          </h3>
+          <div id="modulo1" class="accordion-collapse collapse" 
+               aria-labelledby="heading1" data-bs-parent="#accordionCurso">
+            <div class="accordion-body">
+              <ol>
+                <li>Clase 0. Presentación del curso
+                  <ul>
+                    <li>0.1 Presentación del curso</li>
+                    <li>0.2 Presentación de los alumnos</li>
+                    <li>0.3 Material en CV</li>
+                  </ul>
+                </li>
+                <li>Clase 1. Introducción a la accesibilidad y la discapacidad
+                  <ul>
+                    <li>1.1 Introducción a la accesibilidad web</li>
+                    <li>1.2 Conceptos básicos</li>
+                    <li>1.3 Modelos de discapacidad</li>
+                    <li>1.4 Tipos de discapacidad</li>
+                  </ul>
+                </li>
+                <li>Clase 2. Tecnologías de asistencia y barreras frecuentes (I)</li>
+                <li>Clase 3. Tecnologías de asistencia y barreras frecuentes (II)</li>
+                <li>Clase 4. Normativas e introducción a la evaluación web</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Módulo 2 -->
+        <article class="accordion-item">
+          <h3 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#modulo2" 
+                    aria-expanded="false" aria-controls="modulo2">
+              Módulo 2. Diseño
+            </button>
+          </h3>
+          <div id="modulo2" class="accordion-collapse collapse" 
+               aria-labelledby="heading2" data-bs-parent="#accordionCurso">
+            <div class="accordion-body">
+              <ol>
+                <li>Clase 1. Introducción al diseño</li>
+                <li>Clase 2. Organización de proyectos y foundations I</li>
+                <li>Clase 3. Foundations II y componentes</li>
+                <li>Clase 4. Formularios y elementos de interacción</li>
+                <li>Clase 5. Evaluación Figma</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Módulo 3 -->
+        <article class="accordion-item">
+          <h3 class="accordion-header" id="heading3">
+            <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#modulo3" 
+                    aria-expanded="false" aria-controls="modulo3">
+              Módulo 3. Codificación
+            </button>
+          </h3>
+          <div id="modulo3" class="accordion-collapse collapse" 
+               aria-labelledby="heading3" data-bs-parent="#accordionCurso">
+            <div class="accordion-body">
+              <ol>
+                <li>Clase 1. Introducción a la codificación</li>
+                <li>Clase 2. Contenido básico</li>
+                <li>Clase 3. CSS y accesibilidad</li>
+                <li>Clase 4. WAI-ARIA (básico)</li>
+                <li>Clase 5. WAI-ARIA (avanzado)</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Módulo 4 -->
+        <article class="accordion-item">
+          <h3 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#modulo4" 
+                    aria-expanded="false" aria-controls="modulo4">
+              Módulo 4. Evaluación
+            </button>
+          </h3>
+          <div id="modulo4" class="accordion-collapse collapse" 
+               aria-labelledby="heading4" data-bs-parent="#accordionCurso">
+            <div class="accordion-body">
+              <ol>
+                <li>Clase 1. Introducción a la evaluación</li>
+                <li>Clase 2. Caso práctico: perceptible</li>
+                <li>Clase 3. Caso práctico: operable</li>
+                <li>Clase 4. Caso práctico: comprensible y robusto</li>
+                <li>Clase 5. Informe final y declaración de accesibilidad</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="container py-4 border-top text-center">
+    <p class="mb-0 small">&copy; 2025 Universitat de Lleida — Curso de Especialización en Accesibilidad Digital</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
