@@ -69,7 +69,7 @@ a:hover::before {
 a:focus {
     background-color: #f9dc4a;
     color: #000;
-    background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);
+    /*background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);*/
 
 }
 
