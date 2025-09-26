@@ -1,13 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Microcredencial en Especialización en Accesibilidad Digital</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CSS de Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS de Iconos-boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
 </head>
-<body>
-    <main>
-        <h>hola</h>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Cabecera principal -->
+    <header aria-label="Cabecera de la página">
+        <h1>Microcredencial en Especialización en Accesibilidad Digital</h1>
+
+        <!-- Navegación principal -->
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#presentacion" title="Ir a la sección de presentación">Presentación</a></li>
+                <li><a href="#programa" title="Conoce el programa del curso">Programa</a></li>
+                <li><a href="#profesores" title="Perfil de los profesores">Profesores</a></li>
+                <li><a href="#calendario" title="Encuentra información del calendario del curso">Calendario</a></li>
+                <li><a href="#matricula"  title="Consulta como hacer la matricual">Matricula</a></li>
+                <li><a href="#testimonios" title="Lee la opinión de otros">Testimonios</a></li>
+                <li><a href="#contacto"  title="Envia un mensaje">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main aria-label="Contenido principal de la página">
+
+        <!-- ******************************************************* -->
+        <!-- Sección de presentación -->
+        <!-- Se presenta la información relevante del curso --> 
+        <!-- ******************************************************* -->
+        <section id="presentacion">
+            <article>
+                <header>
+                    <h2>Presentación</h2>
+                </header>
+                <p>Bienvenido a nuestra página web. Aquí encontrarás información relevante sobre nuestros servicios y actividades.</p>
+                <footer>
+                    <p>Pie de la sección de inicio.</p>
+                </footer>
+            </article>
+        </section>
+        
+        
+        <!-- ******************************************************* -->
+        <!-- Sección de programa -->
+        <!-- muestra información del programa formativo del curso-->
+        <!-- ******************************************************* -->
+        
+        <section id="programa">
+            <article>
+                <header>
+                    <h2>Programa</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia, nulla nisi provident aperiam est corporis consectetur at magni sit? Quia unde numquam quos rem voluptas possimus ipsam, aperiam dolor?</p>
+                <footer>
+                    <p>Pie de la sección de programa.</p>
+                </footer>
+            </article>
+        </section>
+
+        <!-- ******************************************************* -->
+        <!-- Sección de profesores -->
+        <!-- muestra información de los profesores del curso-->
+        <!-- ******************************************************* -->
+        
+        <section id="profesores">
+            <article>
+                <header>
+                    <h2>Profesores</h2>
+                </header>
+                
+                <!-- <div class="card-group row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2"> -->
+                <div class="container d-flex justify-content-center align-items-center"><!-- min-vh-100"> -->
+                    <div class="row justify-content-center">
+
+                        <!-- MARIO -->
+                        <section class="col-md-6 col-lg-3"> 
+                            <div class="card mb-3">
+                                <img src="img/mario.jpeg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                <h3 class="card-title">Mario Germán Almonte Moreno</h3>
+                                <p><span class="badge text-bg-secondary">Módulo 1. <wbr> Fundamentos</span>
+                                <p class="card-text">Consultor y Formador en Accesibilidad E-learning y Web | Gestor de Proyectos LMS y CMS | Profesional Certificado en Accesibilidad Web CPWA (CPACC y WAS).</p>
+                                </p>
+                                <a href="https://www.linkedin.com/in/marioalmonte/" class="card-link">
+                                    <i class="bi bi-linkedin"></i>
+                                    Perfil de linkedin
+                                </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- XAVI -->
+                        <section class="col-md-6 col-lg-3"> 
+                            <div class="card mb-3">
+                                <img src="img/xavi.jpeg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                <h3 class="card-title">Xavi Cardet</h3>
+                                <p><span class="badge text-bg-secondary">Módulo 2. <wbr> Diseño</span>
+                                <p class="card-text">UX Lead & Senior Product Designer & A11y lover - +16y in UX 🗣️ Lecturer & Speaker - ex Colvin & Signaturit & Docplanner</p>
+                                 <a href="https://www.linkedin.com/in/uxavi-cardet/" class="card-link">
+                                        <i class="bi bi-linkedin"></i>    
+                                        Perfil de linkedin
+                                 </a>
+                            </div>
+                        </section>                
+
+                        <!-- ALBERTO -->
+                        <section class="col-md-6 col-lg-3"> 
+                            <div class="card mb-3">
+                                <img src="img/alberto.jpeg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                <h3 class="card-title">Alberto Pedrero Esteban</h3>
+                                <p><span class="badge text-bg-secondary">Módulo 3. <wbr> Codificación</span>
+                                <p class="card-text">Accesibilidad. Tratando de enseñar y concienciar sobre accesibilidad digital. Certified Professional in Accessibility Core Competencies (CPACC) from International Association Accessibility Professionals (IAAP).</p>
+                                    <a href="https://www.linkedin.com/in/apedreroes/" class="card-link">
+                                        <i class="bi bi-linkedin"></i>
+                                         Perfil de linkedin
+                                    </a>                                    
+                            </div>
+                        </section>                
+
+                        <!-- AFRA -->
+                        <section class="col-md-6 col-lg-3"> 
+                            <div class="card mb-3">
+                                <img src="img/afra.jpeg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                <h3 class="card-title">Afra Pascual Almenara</h3>
+                                <p><span class="badge text-bg-secondary">Módulo 4. <wbr> Evaluación</span>
+                                <p class="card-text">Profesora Lectora Universidad de Lleida. PhD | Investigadora en Accesibilidad - Consultora en Accesibilidad, UX y AUX (eXperencia de Usuario Accesible) - Defensora A11Y - Conferenciante - Miembro: AccessCAT y W3C.</p>
+                                    <a href="https://www.linkedin.com/in/afra-pascual-almenara/" class="card-link">
+                                        <i class="bi bi-linkedin"></i>
+                                        Perfil de linkedin
+                                    </a>
+                            </div>
+                        </section>               
+                    
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+        <!-- ******************************************************* -->
+        <!-- Sección de calendario -->
+        <!-- muestra información de la temporalización del curso-->
+        <!-- ******************************************************* -->
+        
+        <section id="calendario">
+            <article>
+                <header>
+                    <h2>Calendario</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia, nulla nisi provident aperiam est corporis consectetur at magni sit? Quia unde numquam quos rem voluptas possimus ipsam, aperiam dolor?</p>
+                <footer>
+                    <p>Pie de la sección de programa.</p>
+                </footer>
+            </article>
+        </section>
+
+        <!-- ******************************************************* -->
+        <!-- Sección de matricula -->
+        <!-- muestra información sobre la matricula del curso-->
+        <!-- ******************************************************* -->
+        
+        <section id="matricula">
+            <article>
+                <header>
+                    <h2>Matricula</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia, nulla nisi provident aperiam est corporis consectetur at magni sit? Quia unde numquam quos rem voluptas possimus ipsam, aperiam dolor?</p>
+                <footer>
+                    <p>Pie de la sección de programa.</p>
+                </footer>
+            </article>
+        </section>
+
+        <!-- ******************************************************* -->
+        <!-- Sección de testimoniso  -->
+        <!-- muestra información de otros alumnos del curso-->
+        <!-- ******************************************************* -->
+        
+        <section id="testimonios">
+            <article>
+                <header>
+                    <h2>Testimonios</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia, nulla nisi provident aperiam est corporis consectetur at magni sit? Quia unde numquam quos rem voluptas possimus ipsam, aperiam dolor?</p>
+                <footer>
+                    <p>Pie de la sección de programa.</p>
+                </footer>
+            </article>
+        </section>
+
+
+
+        <!-- Sección de contacto -->
+        <section id="contacto">
+            <article>
+                <header>
+                    <h2>Contacto</h2>
+                </header>
+                <p>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos.</p>
+
+                <!-- Formulario accesible -->
+                <form action="#" method="post" aria-label="Formulario de contacto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+                
+            </article>
+        </section>
     </main>
+
+    <!-- Pie de página -->
+    <footer aria-label="Pie de la página">
+        <p>&copy; 2025 Prácticas Web Dinámica Inc. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JS externo -->
+    <script src="scripts.js"></script>
+
+    <!-- JS framework Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
 </body>
 </html>
