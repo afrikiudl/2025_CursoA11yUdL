@@ -91,7 +91,7 @@
 
 -->
 
-          <nav class="navbar sticky-top shadow-sm bg-white ">
+          <nav aria-label="Navegación principal" class="navbar sticky-top shadow-sm bg-white ">
             <div class="container-fluid flex-wrap justify-content-center gap-2 py-3 px-1 ">
                 <a href="#programa" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Programa</a>
                 <a href="#profesores" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Profesores</a>
@@ -124,13 +124,12 @@
 
 
 
-
-        <section id="programa">
+        <section id="programa" aria-labelledby="aria-programa"></section>
             <article>
-
                 <header class="mb-4 text-center">
-                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Programa</h2>
+                    <h2 id="aria-programa"class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Programa</h2>
                 </header>
+
 
                 <section class="container pb-5">
                     <!-- Navegación rápida -->
@@ -173,9 +172,8 @@
               -->
 
                     <!-- Contenido detallado -->
-                    <section aria-labelledby="contenido-detallado">
-                      <h2 id="contenido-detallado">Contenido detallado</h2>
-                
+                    <section >
+                      
                       <div class="accordion" id="accordionCurso">
                 
                         <!-- Módulo 1 -->
@@ -457,10 +455,10 @@
         <!-- muestra información de los profesores del curso-->
         <!-- ******************************************************* -->
         
-        <section id="profesores">
+        <section id="profesores" aria-labelledby="aria-profesores"></section>
             <article>
                 <header class="mb-4 text-center">
-                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Profesores</h2>
+                    <h2 id="aria-profesores"class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Profesores</h2>
                 </header>
                 
                 <!-- <div class="card-group row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2"> -->
@@ -540,12 +538,12 @@
         <!-- muestra información de la temporalización del curso-->
         <!-- ******************************************************* -->
         
-        <section id="calendario">
-            <article>
+        <section id="calendario" aria-labelledby="aria-calendario"></section>
+        <article>
+            <header class="mb-4 text-center">
+                <h2 id="aria-calendario"class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Calendario</h2>
+            </header>
 
-                <header class="mb-4 text-center">
-                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Calendario</h2>
-                </header>
 
                 <!--
                 <section class="container">
@@ -613,12 +611,12 @@
         <!-- muestra información sobre la matricula del curso-->
         <!-- ******************************************************* -->
         
-        <section id="matricula">
-            <article>
+        <section id="matricula" aria-labelledby="aria-matricula"></section>
+        <article>
+            <header class="mb-4 text-center">
+                <h2 id="aria-matricula"class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Matricula</h2>
+            </header>
 
-                <header class="mb-4 text-center">
-                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Matrícula</h2>
-                </header>
 
                 <section class="container">
                     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -867,12 +865,12 @@
         <!-- muestra información de otros alumnos del curso-->
         <!-- ******************************************************* -->
         
-        <section id="testimonios">
-            <article>
+        <section id="testimonios" aria-labelledby="aria-testimonios"></section>
+        <article>
+            <header class="mb-4 text-center">
+                <h2 id="aria-testimonios"class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Testimonios</h2>
+            </header>
 
-                <header class="mb-4 text-center">
-                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Testimonios</h2>
-                </header>
 
                 <section class="my-5">
                     <div class="row g-4">
@@ -933,11 +931,13 @@
 
 
         <!-- Sección de contacto -->
-        <section id="contacto">
-            <article>
-                <header class="mb-4 text-center">
-                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Contacto</h2>
-                </header>
+
+        <section id="contacto" aria-labelledby="aria-contacto"></section>
+        <article>
+            <header class="mb-4 text-center">
+                <h2 id="aria-contacto"class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Contacto</h2>
+            </header>
+
 
                 <secction class="container">
                     <p>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos.</p>
