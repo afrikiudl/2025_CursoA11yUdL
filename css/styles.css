@@ -157,6 +157,13 @@ nav a:focus {
 }
 
 
+#presentacion {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../img/portadacc.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* para que el texto sea legible */
+  }
+
 /* Focus visible para accesibilidad */
 
 
@@ -187,7 +194,7 @@ article {
     font-weight: 600;
   }
 
-  .accordion-header button:hover {
+.accordion-header button:hover {
     color: #024488;
     background-color: #FADD4A;
 }
@@ -224,6 +231,8 @@ form {
     gap: 0.75rem;
 }
 
+
+
 input, textarea {
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -231,6 +240,17 @@ input, textarea {
     font-size: 1rem;
 }
 
+.input:hover, textarea:hover {
+    color: #024488;
+    background-color: #FADD4A;
+}
+.input:focus, textarea:focus {
+    background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);
+    background-color: #f9dc4a;
+    color: #000;
+}
+
+/*
 button {
     background-color: #007BFF;
     color: white;
@@ -241,14 +261,21 @@ button {
     border-radius: 4px;
     transition: background-color 0.3s;
 }
+*/
 
-button:hover {
-    /*background-color: #0056b3;*/
+.button:hover {
+    color: #024488;
+    background-color: #FADD4A;
+}
+.button:focus {
+    background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a); 
+    background-color: #f9dc4a;
+    color: #000;
 }
 
 /* Footer */
 footer {
-    text-align: center;
+/*    text-align: center; */
     padding: 1rem;
     background-color: #333;
     color: #fff;

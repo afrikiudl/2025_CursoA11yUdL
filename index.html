@@ -22,9 +22,9 @@
 
     <!-- Cabecera principal -->
     <header aria-label="Cabecera de la página">
-        <h1>Microcredencial en Especialización en Accesibilidad Digital</h1>
 
         <!-- Navegación principal -->
+        <!-- 
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="#presentacion" title="Ir a la sección de presentación">Presentación</a></li>
@@ -36,37 +36,76 @@
                 <li><a href="#contacto"  title="Envia un mensaje">Contacto</a></li>
             </ul>
         </nav>
-    </header>
-
-    <!-- Contenido principal -->
-    <main aria-label="Contenido principal de la página">
+    -->
+    
 
         <!-- ******************************************************* -->
         <!-- Sección de presentación -->
         <!-- Se presenta la información relevante del curso --> 
         <!-- ******************************************************* -->
+
+
         <section id="presentacion">
-            <article>
-                <header>
-                    <h2>Presentación</h2>
-                </header>
-                <p>Bienvenido a nuestra página web. Aquí encontrarás información relevante sobre nuestros servicios y actividades.</p>
-                <footer>
-                    <p>Pie de la sección de inicio.</p>
-                </footer>
-            </article>
+        <div class="px-4 py-5 my-5 text-center">
+            <img class="d-block mx-auto mb-4" src="img/logo.jpg" alt="" width="102" height="57">
+            <p>Centro de Formación Continua - Universitat de Lleida</p>
+            <h1 class="display-5 fw-bold">Microcredencial en Especialización en Accesibilidad Digital</h1>
+            <div class="col-lg-12 mx-auto">
+              <p class= "mb-4">Curso completo y modular con certificación de la Universitat de Lleida</p>
+              <!--<div class="d-grid gap-2  d-sm-flex d-md-flex d-lg-flex justify-content-sm-center"> -->
+                <!-- <div class="d-flex flex-row flex-wrap overflow-auto gap-2 justify-content-center py-1 "> -->
+
+            </div>
+          </div>
+          <div class="d-flex flex-row flex-wrap overflow-auto gap-1 justify-content-center py-3 px-1 bg-white  shadow-sm">
+            <a href="#programa" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
+                Programa
+              </a>
+              <a href="#profesores" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
+                Profesores
+              </a>
+              <a href="#calendario" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
+                Calendario
+              </a>
+              <a href="#matricula" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
+                Matricula
+              </a>
+              <a href="#testimonios" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
+                Testimonios
+              </a>
+              <a href="#contacto" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
+                Contacto
+              </a>
+
+
+          </div>
         </section>
+
+
+
+    </header>
         
+    <!-- Contenido principal -->
+    <main aria-label="Contenido principal de la página">
+
         
         <!-- ******************************************************* -->
         <!-- Sección de programa -->
         <!-- muestra información del programa formativo del curso-->
         <!-- ******************************************************* -->
         
+
+
+
+
+
+
+
         <section id="programa">
             <article>
-                <header>
-                    <h2>Programa</h2>
+
+                <header class="mb-4 text-center">
+                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Programa</h2>
                 </header>
 
                 <section class="container pb-5">
@@ -75,7 +114,7 @@
                       <h2 class="h4 mb-3">Acceso rápido a los módulos</h2>
                       <div class="row g-3">
                         <div class="col-md-3">
-                          <button class="btn btn-outline-primary w-100 module-btn"
+                          <button href="#modulo1" class="btn btn-outline-primary w-100 module-btn"
                                   data-bs-toggle="collapse" data-bs-target="#modulo1"
                                   aria-expanded="false" aria-controls="modulo1">
                             Módulo 1 <wbr> Fundamentos
@@ -105,14 +144,17 @@
                       </div>
                     </nav>
                 
+
+              
+
                     <!-- Contenido detallado -->
                     <section aria-labelledby="contenido-detallado">
-                      <h2 id="contenido-detallado" class="h4 mb-3">Contenido detallado</h2>
+                      <h2 id="contenido-detallado">Contenido detallado</h2>
                 
                       <div class="accordion" id="accordionCurso">
                 
                         <!-- Módulo 1 -->
-                        <article class="accordion-item">
+                        <div class="accordion-item">
                           <h3 class="accordion-header" id="heading1">
                             <button class="accordion-button collapsed" type="button" 
                                     data-bs-toggle="collapse" data-bs-target="#modulo1" 
@@ -171,10 +213,10 @@
                                   </ul>
                               </div>
                           </div>
-                        </article>
+                        </div>
                 
                         <!-- Módulo 2 -->
-                        <article class="accordion-item">
+                        <div class="accordion-item">
                           <h3 class="accordion-header" id="heading2">
                             <button class="accordion-button collapsed" type="button" 
                                     data-bs-toggle="collapse" data-bs-target="#modulo2" 
@@ -236,10 +278,10 @@
                                   
                             </div>
                           </div>
-                        </article>
+                        </div>
                 
                         <!-- Módulo 3 -->
-                        <article class="accordion-item">
+                        <div class="accordion-item">
                           <h3 class="accordion-header" id="heading3">
                             <button class="accordion-button collapsed" type="button" 
                                     data-bs-toggle="collapse" data-bs-target="#modulo3" 
@@ -310,10 +352,10 @@
                                   
                             </div>
                           </div>
-                        </article>
+                        </div>
                 
                         <!-- Módulo 4 -->
-                        <article class="accordion-item">
+                        <div class="accordion-item">
                           <h3 class="accordion-header" id="heading4">
                             <button class="accordion-button collapsed" type="button" 
                                     data-bs-toggle="collapse" data-bs-target="#modulo4" 
@@ -375,7 +417,7 @@
                                   
                             </div>
                           </div>
-                        </article>
+                        </div>
                 
                       </div>
                     </section>
@@ -392,8 +434,8 @@
         
         <section id="profesores">
             <article>
-                <header>
-                    <h2>Profesores</h2>
+                <header class="mb-4 text-center">
+                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Profesores</h2>
                 </header>
                 
                 <!-- <div class="card-group row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2"> -->
@@ -403,7 +445,7 @@
                         <!-- MARIO -->
                         <section class="col-md-6 col-lg-3"> 
                             <div class="card mb-3">
-                                <img src="img/mario.jpeg" class="card-img-top" alt="">
+                                <img src="img/mario.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                 <h3 class="card-title">Mario Germán Almonte Moreno</h3>
                                 <p><span class="badge text-bg-secondary">Módulo 1. <wbr> Fundamentos</span>
@@ -420,7 +462,7 @@
                         <!-- XAVI -->
                         <section class="col-md-6 col-lg-3"> 
                             <div class="card mb-3">
-                                <img src="img/xavi.jpeg" class="card-img-top" alt="">
+                                <img src="img/xavi.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                 <h3 class="card-title">Xavi Cardet</h3>
                                 <p><span class="badge text-bg-secondary">Módulo 2. <wbr> Diseño</span>
@@ -435,7 +477,7 @@
                         <!-- ALBERTO -->
                         <section class="col-md-6 col-lg-3"> 
                             <div class="card mb-3">
-                                <img src="img/alberto.jpeg" class="card-img-top" alt="">
+                                <img src="img/alberto.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                 <h3 class="card-title">Alberto Pedrero Esteban</h3>
                                 <p><span class="badge text-bg-secondary">Módulo 3. <wbr> Codificación</span>
@@ -450,7 +492,7 @@
                         <!-- AFRA -->
                         <section class="col-md-6 col-lg-3"> 
                             <div class="card mb-3">
-                                <img src="img/afra.jpeg" class="card-img-top" alt="">
+                                <img src="img/afra.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                 <h3 class="card-title">Afra Pascual Almenara</h3>
                                 <p><span class="badge text-bg-secondary">Módulo 4. <wbr> Evaluación</span>
@@ -475,24 +517,69 @@
         
         <section id="calendario">
             <article>
-                <header>
-                    <h2>Calendario</h2>
+
+                <header class="mb-4 text-center">
+                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Calendario</h2>
                 </header>
+
+                <!--
                 <section class="container">
-                <h3>Calendario en imagenes</h3>
-                <ul>
-                 <li>Clase de bienvenida: 29 de septiembre, se celebrará la clase 0 para todos los alumnos del curso y módulos relacionados.</li>
-                 <li>Módulo de Fundamentos: 2, 6, 9, 13 octubre</li>
-                 <li>Módulo de Diseño: 20. 23, 27, 30 octubre y 3 de noviembre. </li>
-                 <li>Módulo de Codificación: 10, 13, 17, 20, 24 noviembre </li>
-                 <li>Módulo de Evaluación: 1, 4, 11, 15, 18 de diciembre </li>
-                 <li>Sesión invitada: El día 22 de diciembre, habrá una sesión sobre la importancia de la accesibilidad por parte de una empresa relevante en el área de accesibilidad digital
-                </ul>
-                
+                    <p> Clase sincrónica en horario de
+                            <span class="badge rounded-pill text-bg-primary"> 18:00h a 20:00h</span>
+                </p>
+                     <ul>
+                        <li><strong>Clase de bienvenida:</strong>  29 de septiembre, se celebrará la clase 0 para todos los alumnos del curso y módulos relacionados.</li>
+                        <li><strong>Módulo de Fundamentos: </strong> 2, 6, 9, 13 octubre</li>
+                        <li><strong>Módulo de Diseño:</strong>  20. 23, 27, 30 octubre y 3 de noviembre. </li>
+                        <li<strong>Módulo de Codificación: </strong> 10, 13, 17, 20, 24 noviembre </li>
+                        <li><strong>Módulo de Evaluación:</strong>  1, 4, 11, 15, 18 de diciembre </li>
+                        <li><strong>Sesión invitada: </strong> El día 22 de diciembre, habrá una sesión sobre la importancia de la accesibilidad por parte de una empresa relevante en el área de accesibilidad digital
+                    </ul>
                 </section>
-                <footer>
-                    <p>Pie de la sección de programa.</p>
-                </footer>
+                -->
+
+                <section class="container">
+                    <table class="table table-bordered table-striped">
+                        <caption>Calendario de clases sincrónicas del curso</caption>
+                        <p> Clase sincrónicas en horario de
+                            <span class="badge rounded-pill text-bg-dark"> 18:00h a 20:00h</span>
+                        </p>
+
+                        <thead class="table-dark">
+                          <tr>
+                            <th scope="col">Módulo / Evento</th>
+                            <th scope="col">Fechas</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Clase de bienvenida</th>
+                            <td>29 de septiembre</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Módulo 1. Fundamentos</th>
+                            <td>2, 6, 9, 13 octubre</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Módulo 2. Diseño</th>
+                            <td>20, 23, 27, 30 octubre y 3 de noviembre</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Módulo 3. Codificación</th>
+                            <td>10, 13, 17, 20, 24 noviembre</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Módulo 4. Evaluación</th>
+                            <td>1, 4, 11, 15, 18 diciembre</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Sesión invitada</th>
+                            <td>22 diciembre</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                </section>
             </article>
         </section>
 
@@ -503,15 +590,252 @@
         
         <section id="matricula">
             <article>
-                <header>
-                    <h2>Matricula</h2>
+
+                <header class="mb-4 text-center">
+                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Matrícula</h2>
                 </header>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia, nulla nisi provident aperiam est corporis consectetur at magni sit? Quia unde numquam quos rem voluptas possimus ipsam, aperiam dolor?</p>
-                <footer>
-                    <p>Pie de la sección de programa.</p>
-                </footer>
+
+                <section class="container">
+                    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+
+                        <!-- Card 1: Curso completo -->
+                        <div class="col-md-6">
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-header py-3">
+                                    <h4 class="my-0 fw-normal">Microcredencial en Especialización en Accesibilidad Digital - Curso completo</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <strong>Precio original:</strong> <del>1.192 €</del><br>
+                                        <p class="fs-4">Precio con bonificaciones:</p>
+                                      </p>
+
+                                    <p class="card-title pricing-card-title fs-1 text-center">
+                                        58 €
+                                        <small class="text-body-secondary fw-light">/completo</small>
+                                    </p>
+
+                            
+                                      <div class="alert alert-secondary p-1" role="alert">
+                                        ¡Ahorra 1.134 € en la matrícula con <wbr> las Becas Santander y las Subvenciones Next Generation!
+                                      </div>
+
+                                      
+                                      <ul class="list-unstyled mt-3 mb-4 ptext-start ms-4">
+                                        <li>
+                                            <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                            4 módulos
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                            12 semanas
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                            Clases síncronas
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                            Certificado UdL
+                                        </li>
+                                    </ul>
+                                    
+                                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+                                        Preinscripción Curso Completo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <!-- Card 2: Curso completo -->
+
+                            <div class="col-md-6">
+                                <div class="card mb-4 rounded-3 shadow-sm">
+                                    <div class="card-header py-3">
+                                        <h4 class="my-0 fw-normal">Cursar módulos de forma individual</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <strong>Precio original:</strong> <del>400 €</del><br>
+                                            <p class="fs-4">Precio con bonificaciones:</p>
+                                          </p>
+    
+                                        <p class="card-title pricing-card-title fs-1 text-center">
+                                            100 €
+                                            <small class="text-body-secondary fw-light">/completo</small>
+                                        </p>
+    
+                                
+                                          <div class="alert alert-secondary p-1" role="alert">
+                                            ¡Ahorra 300 € en la matrícula con <wbr> las Becas Santander!
+                                          </div>
+    
+                                          
+                                          <ul class="list-unstyled mt-3 mb-4 text-center ms-4">
+                                            <li>
+                                                <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                                1 módulo
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                                 semanas
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                                Clases síncronas
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i>
+                                                Certificado UdL
+                                            </li>
+                                        </ul>
+                                        
+                                            <div class="row g-2 mb-3 ">
+                                                <div class="col-6">
+                                                    <button type="button" class="btn btn-outline-primary w-100">Preinscripción al Módulo 1. Fundamentos</button>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button type="button" class="btn btn-outline-primary w-100">Preinscripción al Módulo 2. Diseño</button>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button type="button" class="btn btn-outline-primary w-100">Preinscripción al Módulo 3. Codificación</button>
+                                                </div>
+                                                <div class="col-6">
+                                                    <button type="button" class="btn btn-outline-primary w-100">Preinscripción al Módulo 4. Evaluación</button>
+                                                </div>
+                                            </div>                           
+                                         
+                                </div>
+                            </div>
+                
+                        <!-- Card 1: Curso completo -->
+                         <!--
+                        <div class="col-md-6">
+                            <div class="card mb-4 rounded-3 shadow-sm h-100 d-flex flex-column">
+                                <div class="card-header py-3 bg-dark text-white">
+                                    <h4 class="my-0 fw-normal">Microcredencial en Especialización en Accesibilidad Digital - Curso completo</h4>
+                                </div>
+                                <div class="card-body flex-grow-1">
+                                    <h1 class="card-title pricing-card-title">58 €<small class="text-body-secondary fw-light"> (precio con bonificaciones)</small></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Precio original: <del>1.192 €</del></li>
+                                        <li>¡Ahorra 1.134 € con Becas Santander y Subvenciones Next Generation!</li>
+                                    </ul>
+                                    
+                                    <button href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=007I" class="btn btn-outline-primary btn-sm w-100">
+                                        Preinscripción Curso Completo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                
+                        <!-- Card 2: Módulo individual -->
+                         <!--
+                        <div class="col-md-6">
+                            <div class="card mb-4 rounded-3 shadow-sm h-100 d-flex flex-column">
+                                <div class="card-header py-3 bg-dark text-white">
+                                    <h4 class="my-0 fw-normal">Cursar módulos de forma individual</h4>
+                                </div>
+                                <div class="card-body flex-grow-1">
+                                    <h1 class="card-title pricing-card-title">100 €<small class="text-body-secondary fw-light"> (precio con bonificaciones)</small></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Precio original: <del>400 €</del></li>
+                                        <li>¡Ahorra 300 € en la matrícula con Becas Santander!</li>
+                                    </ul>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <button type="button" class="btn btn-outline-primary w-100">Preinscripción al Módulo 1. Fundamentos</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="button" class="btn btn-outline-primary w-100">Preinscripción al Módulo 2. Diseño</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="button" class="btn btn-outline-primary w-100">Preinscripción al Módulo 3. Codificación</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="button" class="btn btn-outline-primary w-100">Preinscripción al Módulo 4. Evaluación</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                -->
+
+                <!--
+                <section class="container">
+                    <div class="row g-9">
+
+                        <div class="col-md-6">
+                          <div class="card border-dark h-100 d-flex flex-column">
+                            <div class="card-header bg-dark text-white fw-bold fs-5">
+                                Microcredencial en Especialización en Accesibilidad Digital
+                                <wbr>
+                                Curso completo
+                            </div>
+                            <div class="card-body flex-grow-1">
+                              <p class="card-text">
+                                <strong>Precio original:</strong> <del>1.192 €</del><br>
+                                <p class="fs-4">Precio con bonificaciones: <strong class="text-success fs-4">58 €</strong></p>
+                              </p>
+                    
+                              <div class="alert alert-secondary p-1" role="alert">
+                                ¡Ahorra 1.134 € en la matrícula con <wbr> las Becas Santander y las Subvenciones Next Generation!
+                              </div>
+                            </div>
+                            <div class="card-footer text-center bg-white">
+                                <button href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=007I" class="btn btn-outline-primary btn-sm w-100">Preinscripción Curso Completo</button>
+                            </div>
+                          </div>
+                        </div>
+                    
+
+
+                        <div class="col-md-6">
+                            <div class="card border-dark h-100 d-flex flex-column">
+                              <div class="card-header bg-dark text-white fw-bold fs-5">
+                                Cursar módulos de forma individual
+                              </div>
+                              <div class="card-body flex-grow-1">
+                                <p class="card-text">
+                                  <strong>Precio original:</strong> <del>400 €</del><br>
+                                  <p class="fs-4">Precio con bonificaciones: <strong class="text-success fs-4">100 €</strong></p>
+                                </p>
+                      
+                                <div class="alert alert-secondary p-1" role="alert">
+                                  ¡Ahorra 300 € en la matrícula con <wbr> las Becas Santander!
+                                </div>
+                              </div>
+                              <div class="card-footer text-center bg-white">
+                                <p><strong>Preinscripción por módulo:</strong></p>
+                                <div class="row g-2 mb-3">
+                                    <div class="col-6">
+                                    <button href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=582C" class="btn btn-outline-primary btn-sm w-100">Preinscripción al Módulo 1. Fundamentos</button>
+                                    </div>
+                                    <div class="col-6">
+                                    <button href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=572C" class="btn btn-outline-primary btn-sm w-100">Preinscripción al Módulo 2. Diseño</button>
+                                    </div>
+                                    <div class="col-6">
+                                    <button href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=573C" class="btn btn-outline-primary btn-sm w-100">Preinscripción al Módulo 3. Codificación</button>
+                                    </div>
+                                    <div class="col-6">
+                                    <button href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=574C" class="btn btn-outline-primary btn-sm w-100">Preinscripción al Módulo 4. Evaluación</button>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                  </section>
+                  -->
+                  
             </article>
         </section>
+
 
         <!-- ******************************************************* -->
         <!-- Sección de testimoniso  -->
@@ -520,13 +844,64 @@
         
         <section id="testimonios">
             <article>
-                <header>
-                    <h2>Testimonios</h2>
+
+                <header class="mb-4 text-center">
+                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Testimonios</h2>
                 </header>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus mollitia, nulla nisi provident aperiam est corporis consectetur at magni sit? Quia unde numquam quos rem voluptas possimus ipsam, aperiam dolor?</p>
-                <footer>
-                    <p>Pie de la sección de programa.</p>
-                </footer>
+
+                <section class="my-5">
+                    <div class="row g-4">
+                      <!-- Testimonio 1 -->
+                      <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                          <div class="card-body">
+                            <p class="card-text fst-italic">"Este curso me ha ayudado a comprender la accesibilidad digital de forma práctica y aplicable."</p>
+                          </div>
+                          <div class="card-footer d-flex align-items-center bg-white border-top-0">
+                            <img src="img/alumno1.jpg" alt="Foto de Juan Pérez" class="rounded-circle me-2" width="50" height="50">
+                            <div>
+                              <strong>Juan Pérez</strong><br>
+                              Diseñador Web
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Testimonio 2 -->
+                      <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                          <div class="card-body">
+                            <p class="card-text fst-italic">"Las prácticas con módulos y ejercicios de accesibilidad fueron muy útiles y bien guiadas."</p>
+                          </div>
+                          <div class="card-footer d-flex align-items-center bg-white border-top-0">
+                            <img src="img/alumno2.jpg" alt="Foto de María López" class="rounded-circle me-2" width="50" height="50">
+                            <div>
+                              <strong>María López</strong><br>
+                              Desarrolladora Frontend
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Testimonio 3 -->
+                      <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                          <div class="card-body">
+                            <p class="card-text fst-italic">"El enfoque práctico y accesible del curso me permitió mejorar la UX de mis proyectos digitales."</p>
+                          </div>
+                          <div class="card-footer d-flex align-items-center bg-white border-top-0">
+                            <img src="img/alumno3.jpg" alt="Foto de Ana Torres" class="rounded-circle me-2" width="50" height="50">
+                            <div>
+                              <strong>Pedro Torres</strong><br>
+                              UX Designer
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                
             </article>
         </section>
 
@@ -535,34 +910,196 @@
         <!-- Sección de contacto -->
         <section id="contacto">
             <article>
-                <header>
-                    <h2>Contacto</h2>
+                <header class="mb-4 text-center">
+                    <h2 class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Contacto</h2>
                 </header>
-                <p>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos.</p>
 
-                <!-- Formulario accesible -->
-                <form action="#" method="post" aria-label="Formulario de contacto">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                <secction class="container">
+                    <p>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos.</p>
 
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                    <!-- Formulario accesible -->
+                    <form action="#" method="post" aria-label="Formulario de contacto">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
 
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
 
-                    <button type="submit">Enviar</button>
-                </form>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
+                        <button class="btn btn-outline-primary" type="submit">Enviar</button>
+                    </form>
+                </secction>
                 
             </article>
         </section>
     </main>
 
-    <!-- Pie de página -->
-    <footer aria-label="Pie de la página">
-        <p>&copy; 2025 Prácticas Web Dinámica Inc. Todos los derechos reservados.</p>
-    </footer>
+    <!--PIE DE PAGINA-->
+
+<!-- Footer -->
+<footer class="bg-body-tertiary text-center text-dark">
+    <!-- fuente: https://mdbootstrap.com/docs/standard/navigation/footer/-->
+    <!-- Grid container -->
+     
+    <div class="container p-4">
+      <section class="mb-4">
+        <!--
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        -->
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button" aria-label="enlace a youtube">
+            <i class="bi bi-youtube"></i>
+        </a>
+        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button" aria-label="enlace a github">
+            <i class="bi bi-github"></i>
+        </a>
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Form -->
+      <section class="mb-5">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Avísame cuando haya una nueva edición del curso </strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <!--
+                <input type="email" id="form5Example24" class="form-control" />
+                <label class="form-label" for="form5Example24">Email address</label>
+                -->
+                <label for="form5Example24" class="form-label visually-hidden">Dirección de correo electronico</label>
+                <input type="email" id="form5Example24" class="form-control" placeholder="Introduce tu correo electrónico" required>
+              
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-primary mb-4">
+                    Enviar
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+  
+      <!-- Section: Links -->
+      <section>
+        <!--Grid row-->
+        <div class="row">
+
+  
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+            <p class="text-uppercase">Objetivo del curso</p>
+            <p class="fs-7">Curso orientado al diseño, desarrollo y evaluación de contenidos web accesibles conforme a la EAA 2025, la norma EN 301 549 y las pautas WCAG 2.2. 
+            </p>
+            <p class="text-uppercase">Dirigido a</p>
+            <p class="fs-7"> Dirigido a profesionales, desarrolladores y estudiantes interesados en accesibilidad digital.</p>
+          </div>
+
+          <!--Grid column-->
+  
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+            <p class="text-uppercase text-center">Navegación</p>
+            <a class="text-body" href="#presentacion" title="Ir a la sección de presentación">Presentación</a> |
+            <a class="text-body" href="#programa" title="Conoce el programa del curso">Programa</a> |
+            <a class="text-body" href="#profesores" title="Perfil de los profesores">Profesores</a> |
+            <a class="text-body" href="#calendario" title="Encuentra información del calendario del curso">Calendario</a> |
+            <a class="text-body" href="#matricula" title="Consulta como hacer la matrícula">Matrícula</a> |
+            <a class="text-body" href="#testimonios" title="Lee la opinión de otros">Testimonios</a> |
+            <a class="text-body" href="#contacto" title="Envía un mensaje">Contacto</a>
+            
+  
+            <!--
+            <ul class="text-start ps-md-5 list-inline">
+              <li><a class="text-body" href="#presentacion" title="Ir a la sección de presentación">Presentación</a></li>
+              <li><a class="text-body" href="#programa" title="Conoce el programa del curso">Programa</a></li>
+              <li><a class="text-body" href="#profesores" title="Perfil de los profesores">Profesores</a></li>
+              <li><a class="text-body" href="#calendario" title="Encuentra información del calendario del curso">Calendario</a></li>
+              <li><a class="text-body" href="#matricula" title="Consulta como hacer la matrícula">Matrícula</a></li>
+              <li><a class="text-body" href="#testimonios" title="Lee la opinión de otros">Testimonios</a></li>
+              <li><a class="text-body" href="#contacto" title="Envía un mensaje">Contacto</a></li>
+            </ul>
+            -->
+
+            <section class="mb-4">
+                <a class="btn btn-outline btn-floating m-1" href="https://www.formaciocontinua.udl.cat/" role="button" aria-label="enlace a youtube">
+                    <img class="d-block mx-auto mb-4" src="img/logo.jpg" alt="" width="102" height="57">
+                </a>
+
+                <h5>Universitat de Lleida</h5>
+                <p class="text-body-secondary">Centre de Formació Contínua</p>
+                <p class="text-body-secondary">Carrer de Pere de Cabrera, 5</p>
+                <p class="text-body-secondary">25001 Lleida</p>
+                <p class="text-body-secondary">Tel. 973 703383 / 973 703382</p>
+                <p><a href="mailto:cfc.formaciocontinua@udl.cat" class="text-body-secondary text-decoration-none">cfc.formaciocontinua@udl.cat</a></p>
+           
+
+                  </section>
+          </div>
+          <!--Grid column-->
+
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <!--Grid column-->
+
+            
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <div class="footer__bottom">
+        <p>&copy; 2025       
+            <a class="text-reset fw-bold" href="https://www.udl.cat/ca/es/">Universitat de Lleida</a>
+            Todos los derechos reservados.</p>
+        <p>Web realizada por Afriki</p>
+    </div>
+  
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+
+
+
 
     <!-- JS externo -->
     <script src="js/scripts.js"></script>
