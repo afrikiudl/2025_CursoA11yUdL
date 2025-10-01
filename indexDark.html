@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Example</title>
+
+  <style>
+
+        /* Variables de colores */
+        :root {
+        --bg-color: #ffffff;
+        --text-color: #111111;
+        --primary-color: #005797;
+        }
+
+        body.dark-mode {
+        --bg-color: #121212;
+        --text-color: #eeeeee;
+        --primary-color: #90caf9;
+        }
+
+        body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 20px;
+        }
+
+        /* Header */
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        }
+
+        /* Switch estilo iOS */
+        .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        }
+
+        .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 34px;
+        }
+
+        .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px; width: 26px;
+        left: 4px; bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+        }
+
+        input:checked + .slider {
+        background-color: var(--primary-color);
+        }
+
+        input:checked + .slider:before {
+        transform: translateX(26px);
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi página con Dark Mode</h1>
+        <label class="switch">
+            
+          <input type="checkbox" id="dark-toggle">
+          <span class="slider round"></span>
+        </label>
+      </header>
+      
+  <main>
+    <p>Este es un ejemplo de contenido en la página.</p>
+  </main>
+
+
+  <script>
+    const toggle = document.getElementById('dark-toggle');
+    const body = document.body;
+
+    // Cargar preferencia guardada
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+    body.classList.add('dark-mode');
+    toggle.checked = true;
+    }
+
+    // Cambiar modo al hacer switch
+    toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+    } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+    }
+    });
+
+
+/*Si quieres que al cargar la página se adapte automáticamente a la preferencia del usuario:*/
+    if (!localStorage.getItem('dark-mode')) {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    body.classList.add('dark-mode');
+  }
+}
+
+  </script>
+</body>
+</html>
