@@ -430,7 +430,7 @@ div[onclick]:hover {
             </div>
 
 
-                
+                <!--
                 <div class="container">
                     <p> Clase sincrónica en horario de 18:00h a 20:00h </p>
                      <ul>
@@ -442,6 +442,60 @@ div[onclick]:hover {
                         <li><strong>Sesión invitada: </strong> El día 22 de diciembre, habrá una sesión sobre la importancia de la accesibilidad por parte de una empresa relevante en el área de accesibilidad digital
                     </ul>
                 </div>
+
+            -->
+
+            <!-- TABLA INACCESIBLE - Mantiene <table> pero sin semántica -->
+
+<table class="table table-bordered table-striped">
+    <!-- Caption eliminado completamente -->
+    
+    <p style="color: #aaa;"> Clases sincrónicas en horario de
+        <span class="badge rounded-pill text-bg-dark" style="background-color: #999; color: #ddd;"> 18:00h a 20:00h</span>
+    </p>
+
+    <!-- THEAD sin clase semántica, fondo con bajo contraste -->
+    <thead style="background-color: #888; color: #bbb;">
+        <tr>
+            <!-- TD en lugar de TH, sin scope -->
+            <td style="padding: 10px;">Módulo / Evento</td>
+            <td style="padding: 10px;">Fechas</td>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+            <!-- Todo TD, sin TH con scope="row" -->
+            <td style="color: #999;">Clase de bienvenida</td>
+            <td style="color: #aaa;">29 de septiembre</td>
+        </tr>
+        
+        <tr>
+            <td style="color: #999;">Módulo 1. Fundamentos</td>
+            <td style="color: #aaa;">2, 6, 9, 13 octubre</td>
+        </tr>
+        
+        <tr>
+            <td style="color: #999;">Módulo 2. Diseño</td>
+            <td style="color: #aaa;">20, 23, 27, 30 octubre y 3 de noviembre</td>
+        </tr>
+        
+        <tr>
+            <td style="color: #999;">Módulo 3. Codificación</td>
+            <td style="color: #aaa;">10, 13, 17, 20, 24 noviembre</td>
+        </tr>
+        
+        <tr>
+            <td style="color: #999;">Módulo 4. Evaluación</td>
+            <td style="color: #aaa;">1, 4, 11, 15, 18 diciembre</td>
+        </tr>
+        
+        <tr>
+            <td style="color: #999;">Sesión invitada</td>
+            <td style="color: #aaa;">22 diciembre</td>
+        </tr>
+    </tbody>
+</table>
                 
             </div>
         </div>
