@@ -8,11 +8,6 @@
     <!-- CSS externo -->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- asfasfsfasd -->
-     <!-- asfasfsfasd -->
-      <!-- asfasfsfasd -->
-       <!-- asfasfsfasd -->
         
 
     <!-- CSS de Boostrap -->
@@ -30,9 +25,6 @@
     <!-- Cabecera principal -->
     <header aria-label="Cabecera de la página">
 
-
-    
-
         <!-- ******************************************************* -->
         <!-- Sección de presentación -->
         <!-- Se presenta la información relevante del curso --> 
@@ -41,8 +33,8 @@
 
         <section id="presentacion">
         <div class="px-4 py-5 my-5 text-center">
-            <img class="d-block mx-auto mb-4" src="img/logo.jpg" alt="" width="102" height="57">
-            <p>Centro de Formación Continua - Universitat de Lleida</p>
+            <img class="d-block mx-auto mb-4" src="img/logo.jpg" alt="" width="102" height="57" aria-labelledby="logocentro">
+            <p id="logocentro">Centro de Formación Continua - Universitat de Lleida</p>
             <h1 class="display-5 fw-bold">Microcredencial en Especialización en Accesibilidad Digital</h1>
             <div class="col-lg-12 mx-auto">
               <p class= "mb-4">Curso completo y modular con certificación de la Universitat de Lleida</p>
@@ -51,49 +43,41 @@
 
             </div>
           </div>
-          <!--
-          <div class="d-flex flex-row flex-wrap overflow-auto gap-1 justify-content-center py-3 px-1 bg-white  shadow-sm">
-            <a href="#programa" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
-                Programa
-              </a>
-              <a href="#profesores" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
-                Profesores
-              </a>
-              <a href="#calendario" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
-                Calendario
-              </a>
-              <a href="#matricula" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
-                Matricula
-              </a>
-              <a href="#testimonios" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
-                Testimonios
-              </a>
-              <a href="#contacto" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">
-                Contacto
-              </a>
 
-          </div>
 
-          <nav class="navbar sticky-top d-flex flex-row flex-wrap overflow-auto gap-1 justify-content-center py-3 px-1 bg-white shadow-sm">
-            <a href="#programa" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Programa</a>
-            <a href="#profesores" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Profesores</a>
-            <a href="#calendario" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Calendario</a>
-            <a href="#matricula" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Matrícula</a>
-            <a href="#testimonios" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Testimonios</a>
-            <a href="#contacto" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Contacto</a>
-          </nav>
+          <nav class="navbar navbar-expand-xxl sticky-top shadow-sm bg-white" aria-label="Navegación principal">
+            <div class="container-fluid">
+              <!-- Botón hamburguesa accesible -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" 
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+                MENU
+              </button>
 
--->
-
-          <nav aria-label="Navegación principal" class="navbar sticky-top shadow-sm bg-white ">
-            <div class="container-fluid flex-wrap justify-content-center gap-2 py-3 px-1 ">
-                <a href="#programa" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Programa</a>
-                <a href="#profesores" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Profesores</a>
-                <a href="#calendario" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Calendario</a>
-                <a href="#matricula" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Matrícula</a>
-                <a href="#testimonios" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Testimonios</a>
-                <a href="#contacto" class="border border-primary rounded px-4 py-3 text-decoration-none text-primary">Contacto</a>
-                </div>
+              <!-- Contenido del menú -->
+              <div class="collapse navbar-collapse justify-content-center gap-2" id="menuPrincipal">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a href="#programa" class="nav-link border border-primary rounded px-4 py-2 text-primary">Programa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#profesores" class="nav-link border border-primary rounded px-4 py-2 text-primary">Profesores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#calendario" class="nav-link border border-primary rounded px-4 py-2 text-primary">Calendario</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#matricula" class="nav-link border border-primary rounded px-4 py-2 text-primary">Matrícula</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#testimonios" class="nav-link border border-primary rounded px-4 py-2 text-primary">Testimonios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#contacto" class="nav-link border border-primary rounded px-4 py-2 text-primary">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </nav>
 
 
@@ -126,45 +110,6 @@
 
 
                 <section class="container pb-5">
-                    <!-- Navegación rápida -->
-                     <!--
-                    <nav aria-label="Acceso rápido a módulos" class="mb-5">
-                      <h2 class="h4 mb-3">Acceso rápido a los módulos</h2>
-                      <div class="row g-3">
-                        <div class="col-md-3">
-                          <button href="#modulo1" class="btn btn-outline-primary w-100 module-btn"
-                                  data-bs-toggle="collapse" data-bs-target="#modulo1"
-                                  aria-expanded="false" aria-controls="modulo1">
-                            Módulo 1 <wbr> Fundamentos
-                          </button>
-                        </div>
-                        <div class="col-md-3">
-                          <button class="btn btn-outline-primary w-100 module-btn"
-                                  data-bs-toggle="collapse" data-bs-target="#modulo2"
-                                  aria-expanded="false" aria-controls="modulo2">
-                            Módulo 2 <wbr> Diseño
-                          </button>
-                        </div>
-                        <div class="col-md-3">
-                          <button class="btn btn-outline-primary w-100 module-btn"
-                                  data-bs-toggle="collapse" data-bs-target="#modulo3"
-                                  aria-expanded="false" aria-controls="modulo3">
-                            Módulo 3 <wbr> Codificación
-                          </button>
-                        </div>
-                        <div class="col-md-3">
-                          <button class="btn btn-outline-primary w-100 module-btn"
-                                  data-bs-toggle="collapse" data-bs-target="#modulo4"
-                                  aria-expanded="false" aria-controls="modulo4">
-                            Módulo 4 <wbr> Evaluación
-                          </button>
-                        </div>
-                      </div>
-                    </nav>
-                
-
-              -->
-
                     <!-- Contenido detallado -->
                     <section >
                       
@@ -176,7 +121,7 @@
                             <button class="accordion-button collapsed" type="button" 
                                     data-bs-toggle="collapse" data-bs-target="#modulo1" 
                                     aria-expanded="false" aria-controls="modulo1">
-                              Módulo 1. Fundamentos en Accesibilidad Digital
+                              Módulo 1. Fundamentos
                             </button>
                           </h3>
                           <div id="modulo1" class="accordion-collapse collapse" 
@@ -464,11 +409,11 @@
                             <div class="card mb-3">
                                 <img src="img/mario.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
-                                <h3 class="card-title fs-4">Mario Germán Almonte Moreno</h3>
+                                <h3 id="nombreM" class="card-title fs-4">Mario Germán Almonte Moreno</h3>
                                 <p><span class="badge text-bg-secondary">Módulo 1. <wbr> Fundamentos</span>
                               <!--  <p class="card-text">Consultor y Formador en Accesibilidad E-learning y Web | Gestor de Proyectos LMS y CMS | Profesional Certificado en Accesibilidad Web CPWA (CPACC y WAS).</p> -->
                                 </p>
-                                <a href="https://www.linkedin.com/in/marioalmonte/" class="card-link">
+                                <a id="textoLinkedinM" href="https://www.linkedin.com/in/marioalmonte/" class="card-link" aria-labelledby="textoLinkedinM nombreM">
                                     <i class="bi bi-linkedin"></i>
                                     Perfil de linkedin
                                 </a>
@@ -481,11 +426,11 @@
                             <div class="card mb-3">
                                 <img src="img/xavi.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
-                                <h3 class="card-title fs-4">Xavi Cardet</h3>
+                                <h3 id="nombreX" class="card-title fs-4">Xavi Cardet</h3>
                                 <p><span class="badge text-bg-secondary">Módulo 2. <wbr> Diseño</span>
                                <!-- <p class="card-text">UX Lead & Senior Product Designer & A11y lover - +16y in UX 🗣️ Lecturer & Speaker - ex Colvin & Signaturit & Docplanner</p>-->
                                 </p>
-                                 <a href="https://www.linkedin.com/in/uxavi-cardet/" class="card-link">
+                                 <a id="textoLinkedinX" href="https://www.linkedin.com/in/uxavi-cardet/" class="card-link" aria-labelledby="textoLinkedinX nombreX">
                                         <i class="bi bi-linkedin"></i>    
                                         Perfil de linkedin
                                  </a>
@@ -497,11 +442,11 @@
                             <div class="card mb-3">
                                 <img src="img/alberto.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
-                                <h3 class="card-title fs-4">Alberto Pedrero Esteban</h3>
+                                <h3 id="nombreAL" class="card-title fs-4">Alberto Pedrero Esteban</h3>
                                  <p><span class="badge text-bg-secondary">Módulo 3. <wbr> Codificación</span> 
                                 <!--<p class="card-text">Accesibilidad. Tratando de enseñar y concienciar sobre accesibilidad digital. Certified Professional in Accessibility Core Competencies (CPACC) from International Association Accessibility Professionals (IAAP).</p> -->
                                 </p>
-                                    <a href="https://www.linkedin.com/in/apedreroes/" class="card-link">
+                                    <a id="textoLinkedinAL" href="https://www.linkedin.com/in/apedreroes/" class="card-link" aria-labelledby="textoLinkedinAL nombreAL">
                                         <i class="bi bi-linkedin"></i>
                                          Perfil de linkedin
                                     </a>                                    
@@ -513,14 +458,14 @@
                             <div class="card mb-3">
                                 <img src="img/afra.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
-                                <h3 class="card-title fs-4">Afra Pascual Almenara</h3>
+                                <h3 id="nombreA" class="card-title fs-4">Afra Pascual Almenara</h3>
                                 <p> <i class="bi bi-bookmark-star-fill"></i>
                                   Coordinadora</p>
 
                                 <p><span class="badge text-bg-secondary">Módulo 4. <wbr> Evaluación</span>
                                <!-- <p class="card-text">Profesora Lectora Universidad de Lleida. PhD | Investigadora en Accesibilidad - Consultora en Accesibilidad, UX y AUX (eXperencia de Usuario Accesible) - Defensora A11Y - Conferenciante - Miembro: AccessCAT y W3C.</p> -->
                               </p>
-                                    <a href="https://www.linkedin.com/in/afra-pascual-almenara/" class="card-link">
+                                    <a id="textoLinkedinA" href="https://www.linkedin.com/in/afra-pascual-almenara/" class="card-link" aria-labelledby="textoLinkedinA nombreA">
                                         <i class="bi bi-linkedin"></i>
                                         Perfil de linkedin
                                     </a>
@@ -677,7 +622,7 @@
                             <div class="col-md-6">
                                 <div class="card mb-4 rounded-3 shadow-sm">
                                   <div class="card-header py-3 bg-dark text-white">
-                                    <h4 class="my-0 fw-normal">Cursar módulos de forma individual</h4>
+                                    <h3 class="my-0 fw-normal">Cursar módulos de forma individual</h3>
                                     </div>
                                     <div class="card-body">
                                         <p class="card-text">
@@ -752,7 +697,7 @@
                             <p class="card-text fst-italic">"Este curso me ha ayudado a comprender la accesibilidad digital de forma práctica y aplicable."</p>
                           </div>
                           <div class="card-footer d-flex align-items-center bg-white border-top-0">
-                            <img src="img/alumno1.jpg" alt="Foto de Juan Pérez" class="rounded-circle me-2" width="50" height="50">
+                            <img src="img/alumno1.jpg" alt="" class="rounded-circle me-2" width="50" height="50">
                             <div>
                               <strong>Juan Pérez</strong><br>
                               Diseñador Web
@@ -768,7 +713,7 @@
                             <p class="card-text fst-italic">"Las prácticas con módulos y ejercicios de accesibilidad fueron muy útiles y bien guiadas."</p>
                           </div>
                           <div class="card-footer d-flex align-items-center bg-white border-top-0">
-                            <img src="img/alumno2.jpg" alt="Foto de María López" class="rounded-circle me-2" width="50" height="50">
+                            <img src="img/alumno2.jpg" alt="" class="rounded-circle me-2" width="50" height="50">
                             <div>
                               <strong>María López</strong><br>
                               Desarrolladora Frontend
@@ -784,7 +729,7 @@
                             <p class="card-text fst-italic">"El enfoque práctico y accesible del curso me permitió mejorar la UX de mis proyectos digitales."</p>
                           </div>
                           <div class="card-footer d-flex align-items-center bg-white border-top-0">
-                            <img src="img/alumno3.jpg" alt="Foto de Ana Torres" class="rounded-circle me-2" width="50" height="50">
+                            <img src="img/alumno3.jpg" alt="" class="rounded-circle me-2" width="50" height="50">
                             <div>
                               <strong>Pedro Torres</strong><br>
                               UX Designer
@@ -907,7 +852,7 @@
 
 <!--  mb-4 mb-md-0 fs-5 -->
 
-              <div  class="ms-2">
+              <div  class="ms-2" aria-label="navegación principal del pie de pagina">
                 <ul class="list-unstyled lh-1">
                 <li>
                     <a href="#presentacion" title="Ir a la sección de presentación">Presentación</a>                </li>
@@ -940,7 +885,7 @@
             <div class="ms-3 ps-3">
             
             <a class="btn btn-outline btn-floating m-1" href="https://www.formaciocontinua.udl.cat/" role="button" aria-label="enlace a la web de formación continua">
-                <img class="d-block mx-auto mb-4" src="img/logo.jpg" alt="" width="102" height="57">
+                <img class="d-block mx-auto mb-4" src="img/logo.jpg" alt="" width="102" height="57" aria-label="logo del centro de formación continua universitat de lleida">
             </a> 
             </div>
 
@@ -977,7 +922,7 @@
         <p>&copy; 2025       
             <a class="text-reset fw-bold" href="https://www.udl.cat/ca/es/">Universitat de Lleida</a>
             Todos los derechos reservados.</p>
-        <p>Web realizada por <a class="text-reset fw-bold" href="mailto:afrikiudl@gmail.com" aria-label="se abre aplicación de correo electronido">Afriki</a>
+        <p>Web realizada por <a class="text-reset fw-bold" href="mailto:afrikiudl@gmail.com" aria-label="se abre aplicación de correo electronico">Afriki</a>
           </p>
     </div>
   

@@ -103,20 +103,6 @@ a:focus {
     margin-top: 0 !important;
   }
 
-  /* oculta el enlace de saltar al contenido */
-  /*
-  .skip-link:not(:focus):not(:active) {
-    border: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(100%);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-    */
 
 /* Navegación */
 nav ul {
@@ -148,14 +134,15 @@ nav a {
 }
 
 nav a:hover {
-    color: #024488;
+    /*color: #024488;*/
+    color:#000 !important;
     background-color: #FADD4A;
 }
 
 nav a:focus {
     background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);
     background-color: #f9dc4a;
-    color: #000;
+    color:#000 !important;
 }
 
 
@@ -265,6 +252,7 @@ button {
 }
 */
 
+
 .btn-custom-border {
     color: #fff; /* color del texto */
     background-color: #0d6efd; /* color de fondo */
@@ -294,4 +282,9 @@ footer {
     padding: 1rem;
     background-color: #333;
     color: #fff;
+}
+
+
+#modulo1 ul, #modulo2 ul, #modulo3 ul, #modulo4 ul {
+    list-style-type: none;
 }
