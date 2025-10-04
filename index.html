@@ -489,24 +489,7 @@
                 <h2 id="aria-calendario"class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Calendario</h2>
             </header>
 
-
-                <!--
-                <section class="container">
-                    <p> Clase sincrónica en horario de
-                            <span class="badge rounded-pill text-bg-primary"> 18:00h a 20:00h</span>
-                </p>
-                     <ul>
-                        <li><strong>Clase de bienvenida:</strong>  29 de septiembre, se celebrará la clase 0 para todos los alumnos del curso y módulos relacionados.</li>
-                        <li><strong>Módulo de Fundamentos: </strong> 2, 6, 9, 13 octubre</li>
-                        <li><strong>Módulo de Diseño:</strong>  20. 23, 27, 30 octubre y 3 de noviembre. </li>
-                        <li<strong>Módulo de Codificación: </strong> 10, 13, 17, 20, 24 noviembre </li>
-                        <li><strong>Módulo de Evaluación:</strong>  1, 4, 11, 15, 18 de diciembre </li>
-                        <li><strong>Sesión invitada: </strong> El día 22 de diciembre, habrá una sesión sobre la importancia de la accesibilidad por parte de una empresa relevante en el área de accesibilidad digital
-                    </ul>
-                </section>
-                -->
-
-                <section class="container">
+            <section class="container">
                     <table class="table table-bordered table-striped">
                         <caption class="visually-hidden">Calendario de clases sincrónicas del curso</caption>
                         <p> Clases sincrónicas en horario de
@@ -608,10 +591,11 @@
                                         </li>
                                     </ul>
                                   </div>
-                                    
-                                    <a class="w-100 btn-custom-border text-center text-decoration-none" href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=007I">
+                                  <div class="botonCurso">
+                                    <a id="botonCurso" role="button" class="w-100 btn-custom-border text-center text-decoration-none" href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=007I">
                                         Preinscripción Curso Completo
                                     </a>
+                                    </div>
                                 </div>
                             </div>  
                         </div>
@@ -660,11 +644,11 @@
                                             </li>
                                         </ul>
                                         </div>
-
-                                        <a class="w-100 btn-custom-border text-center text-decoration-none" href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=007I">
+                                        <div class="botonCurso">
+                                        <a role="button" class="w-100 btn-custom-border text-center text-decoration-none" href="http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=007I">
                                           Preinscripción a un solo módulo
-                                        </a>
-                                         
+                                        </a>                                         
+                                      </div>
                                 </div>
                             </div>
                             </div>
@@ -769,7 +753,7 @@
                         <label for="mensaje">Mensaje:</label>
                         <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-                        <button class="btn-custom-border" type="submit" aria-label="enviar formulario de contacto">Enviar</button>
+                        <button class="btn-custom-border" type="submit" aria-label="enviar formulario de contacto" onclick="alert('Formulario enviado')">Enviar</button>
                     </form>
                 </secction>
                 
@@ -828,7 +812,7 @@
             <!--Grid column-->
             <div class="col-auto">
               <!-- Submit button -->
-              <button type="submit" class="btn-custom-border" aria-label="enviar información para futuras ediciones">
+              <button type="submit" class="btn-custom-border" onclick="alert('Formulario enviado')" aria-label="enviar información para futuras ediciones">
                     Enviar
               </button>
             </div>
@@ -854,8 +838,6 @@
 
               <div  class="ms-2" aria-label="navegación principal del pie de pagina">
                 <ul class="list-unstyled lh-1">
-                <li>
-                    <a href="#presentacion" title="Ir a la sección de presentación">Presentación</a>                </li>
                 <li>
                     <a href="#programa" title="Conoce el programa del curso">Programa</a>
                 </li>

@@ -55,7 +55,6 @@ a:hover {
     /*text-decoration: underline;*/
     background-color: #FADD4A;
     background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);
-
 }
 
 a:visited {
@@ -210,6 +209,31 @@ article {
    justify-content: space-around;
 
   }
+
+
+  /*CURSO */
+.botonCurso a {
+    border: 0;
+    color: #fdfeff;
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    padding-bottom: 0.5625rem;
+    padding-top: 0.5625rem;
+}
+
+.botonCurso a:hover {
+    /*color: #024488;*/
+    color:#000 !important;
+    background-color: #FADD4A;
+}
+
+.botonCurso a:focus {
+    background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);
+    background-color: #f9dc4a;
+    color:#000 !important;
+}
+
 
 
 

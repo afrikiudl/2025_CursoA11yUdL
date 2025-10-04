@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Microcredencial Accesibilidad Digital</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        /* ELIMINADO: outline y focus visible */
+        *:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Enlaces con BAJO CONTRASTE */
+        a {
+            color: #88a3c4; /* Contraste insuficiente sobre blanco */
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #9db3cf; /* Apenas cambia */
+        }
+
+        a:visited {
+            color: #c9a8d4; /* Bajo contraste */
+        }
+
+        /* ELIMINADO: Skip link */
+        .skip-link {
+            display: none !important;
+        }
+
+        /* Navegación sin estructura semántica */
+        .menu-container {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            margin: 0 1rem;
+        }
+
+        .menu-link {
+            color: #88a3c4;
+            padding: 10px;
+        }
+
+        #presentacion {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url('../img/portadacc.jpg') no-repeat center center;
+            /*background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23555" width="100" height="100"/></svg>');
+            */
+            background-size: cover;
+            color: #999; /* BAJO CONTRASTE sobre fondo oscuro */
+
+            
+        }
+
+        .titulo-principal {
+            padding: 3rem 1em;
+            color: #aaa; /* Bajo contraste */
+        }
+
+        .contenido-principal {
+            padding: 2rem;
+        }
+
+        .caja-contenido {
+            border: 1px solid #e8e8e8;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .modulo-btn {
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* Botones del acordeón SIN indicadores de estado */
+        .accordion-button {
+            background-color: #f0f0f0 !important;
+            color: #888 !important; /* Bajo contraste */
+        }
+
+        .accordion-button:hover {
+            background-color: #f5f5f5 !important;
+        }
+
+        /* FORMULARIO SIN LABELS */
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .campo-entrada {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #aaa; /* Bajo contraste en texto */
+        }
+
+        /* Placeholder como única indicación (INACCESIBLE) */
+        .campo-entrada::placeholder {
+            color: #bbb;
+        }
+
+        .btn-enviar {
+            color: #ddd; /* Bajo contraste */
+            background-color: #9db3cf; /* Bajo contraste */
+            border: 1px solid #9db3cf;
+            border-radius: 4px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .btn-enviar:hover {
+            background-color: #aac0d6;
+        }
+
+        /* Footer con bajo contraste */
+        .pie-pagina {
+            padding: 1rem;
+            background-color: #555;
+            color: #888; /* BAJO CONTRASTE */
+        }
+
+        /* Textos decorativos sin significado semántico */
+        .icono-decorativo {
+            color: #bbb;
+        }
+
+        /* Imágenes sin alt */
+        img {
+            border: none;
+        }
+
+
+        /* Agregar al CSS existente para completar la inaccesibilidad */
+.icono-decorativo {
+    color: #d0d0d0; /* Bajo contraste */
+    font-weight: normal;
+}
+
+.btn-custom-border:focus {
+    outline: none !important; /* Elimina indicador de foco */
+}
+
+/* Divs clickeables sin indicadores hover adecuados */
+div[onclick] {
+    color: #a0a0a0 !important;
+}
+
+div[onclick]:hover {
+    color: #b0b0b0 !important; /* Cambio mínimo */
+}
+
+
+/* Agregar al CSS existente */
+
+/* Eliminar indicadores de foco en las cards */
+.card:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Texto de testimonios con bajo contraste */
+.card-text {
+    color: #aaa !important; /* Contraste insuficiente */
+}
+
+/* Imágenes de perfil sin indicación de propósito */
+.rounded-circle {
+    border: none;
+}
+
+/* Footer de card con bajo contraste */
+.card-footer span {
+    color: #888; /* Bajo contraste para nombres */
+}
+
+.card-footer span:last-child {
+    color: #bbb; /* Aún peor contraste para profesiones */
+}
+    </style>
+</head>
+<body>
+    <!-- ELIMINADO: skip-link -->
+
+    <!-- ELIMINADO: <header> y roles ARIA -->
+    <div id="presentacion">
+        <div class="px-4 py-5 my-5 text-center">
+            <!-- ELIMINADO: alt text -->
+            <img class="d-block mx-auto mb-4" src="img/logo.jpg" width="102" height="57">
+            <div>Centro de Formación Continua - Universitat de Lleida</div>
+            <!-- ELIMINADO: h1 semántico -->
+            <div class="titulo-principal display-5 fw-bold">Microcredencial en Especialización en Accesibilidad Digital</div>
+            <div class="col-lg-12 mx-auto">
+              <div class="mb-4">Curso completo y modular con certificación de la Universitat de Lleida</div>
+            </div>
+        </div>
+
+        <!-- ELIMINADO: <nav> semántico y aria-label -->
+        <div class="navbar navbar-expand-sm sticky-top shadow-sm bg-white">
+            <div class="container-fluid">
+              <!-- ELIMINADO: aria-label, aria-controls, aria-expanded -->
+              <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+                <!-- eliminado MENU -->
+              </div>
+
+              <div class="collapse navbar-collapse justify-content-center gap-2" id="menuPrincipal">
+                <!-- ELIMINADO: <ul> y <li> semánticos -->
+                <div class="menu-container">
+                  <div class="menu-item">
+                    <div class="menu-link border border-primary rounded px-4 py-2 text-primary" onclick="location.href='#programa'">Programa</div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-link border border-primary rounded px-4 py-2 text-primary" onclick="location.href='#profesores'">Profesores</div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-link border border-primary rounded px-4 py-2 text-primary" onclick="location.href='#calendario'">Calendario</div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-link border border-primary rounded px-4 py-2 text-primary" onclick="location.href='#matricula'">Matrícula</div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-link border border-primary rounded px-4 py-2 text-primary" onclick="location.href='#testimonios'">Testimonios</div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-link border border-primary rounded px-4 py-2 text-primary" onclick="location.href='#contacto'">Contacto</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ELIMINADO: <main> semántico -->
+    <div class="contenido-principal">
+        <!-- ELIMINADO: <section> y aria-labelledby -->
+        <div id="programa">
+            <!-- ELIMINADO: <article> -->
+            <div>
+                <!-- ELIMINADO: <header> -->
+                <div class="mb-4 text-center">
+                    <!-- ELIMINADO: h2 con id -->
+                    <div class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Programa</div>
+                </div>
+
+                <div class="container pb-5">
+                    <div class="accordion" id="accordionCurso">
+                        <!-- Módulo 1 - ELIMINADO: headings semánticos -->
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <!-- ELIMINADO: aria-expanded y aria-controls -->
+                            <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#modulo1">
+                              Módulo 1. Fundamentos
+                            </div>
+                          </div>
+                          <div id="modulo1" class="accordion-collapse collapse" data-bs-parent="#accordionCurso">
+                            <div class="accordion-body">
+                                <div>Clase 0. Presentación del curso</div>
+                                <div>Clase 1. Introducción a la accesibilidad</div>
+                                <div>Clase 2. Tecnologías de asistencia (I)</div>
+                                <div>Clase 3. Tecnologías de asistencia (II)</div>
+                                <div>Clase 4. Normativas de accesibilidad</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Módulo 2 -->
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#modulo2">
+                              Módulo 2. Diseño
+                            </div>
+                          </div>
+                          <div id="modulo2" class="accordion-collapse collapse" data-bs-parent="#accordionCurso">
+                            <div class="accordion-body">
+                                <div>Clase 1. Introducción al diseño</div>
+                                <div>Clase 2. Organización de proyectos</div>
+                                <div>Clase 3. Fundations y componentes</div>
+                                <div>Clase 4. Formularios</div>
+                                <div>Clase 5. Evaluación Figma</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Módulo 3 -->
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#modulo3">
+                              Módulo 3. Codificación
+                            </div>
+                          </div>
+                          <div id="modulo3" class="accordion-collapse collapse" data-bs-parent="#accordionCurso">
+                            <div class="accordion-body">
+                                <div>Clase 1. Introducción a la codificación</div>
+                                <div>Clase 2. Contenido básico</div>
+                                <div>Clase 3. CSS y accesibilidad</div>
+                                <div>Clase 4. WAI-ARIA básico</div>
+                                <div>Clase 5. WAI-ARIA avanzado</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Módulo 4 -->
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#modulo4">
+                              Módulo 4. Evaluación
+                            </div>
+                          </div>
+                          <div id="modulo4" class="accordion-collapse collapse" data-bs-parent="#accordionCurso">
+                            <div class="accordion-body">
+                                <div>Clase 1. Introducción a la evaluación</div>
+                                <div>Clase 2. Evaluación caso práctico (I)</div>
+                                <div>Clase 3. Evaluación caso práctico (II)</div>
+                                <div>Clase 4. Evaluación caso práctico (III)</div>
+                                <div>Clase 5. Informe final</div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFESORES - estructura no semántica -->
+        <div id="profesores">
+            <div>
+                <div class="mb-4 text-center">
+                    <div class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Profesores</div>
+                </div>
+                
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-3"> 
+                            <div class="card mb-3">
+                                <!-- ELIMINADO: alt -->
+                                <img src="img/mario.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <div class="card-title fs-4">Mario Germán Almonte Moreno</div>
+                                <div><span class="badge text-bg-secondary">Módulo 1. Fundamentos</span></div>
+                                <!-- ELIMINADO: aria-labelledby -->
+                                <div class="card-link" onclick="window.open('https://www.linkedin.com/in/marioalmonte/')">
+                                    <i class="bi bi-linkedin"></i>
+                                    Perfil de linkedin
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3"> 
+                            <div class="card mb-3">
+                                <img src="img/xavi.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <div class="card-title fs-4">Xavi Cardet</div>
+                                <div><span class="badge text-bg-secondary">Módulo 2. Diseño</span></div>
+                                <div class="card-link" onclick="window.open('https://www.linkedin.com/in/uxavi-cardet/')">
+                                    <i class="bi bi-linkedin"></i>    
+                                    Perfil de linkedin
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3"> 
+                            <div class="card mb-3">
+                                <img src="img/alberto.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <div class="card-title fs-4">Alberto Pedrero Esteban</div>
+                                <div><span class="badge text-bg-secondary">Módulo 3. Codificación</span></div>
+                                <div class="card-link" onclick="window.open('https://www.linkedin.com/in/apedreroes/')">
+                                    <i class="bi bi-linkedin"></i>
+                                    Perfil de linkedin
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3"> 
+                            <div class="card mb-3">
+                                <img src="img/afra.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <div class="card-title fs-4">Afra Pascual Almenara</div>
+                                <div><i class="bi bi-bookmark-star-fill"></i> Coordinadora</div>
+                                <div><span class="badge text-bg-secondary">Módulo 4. Evaluación</span></div>
+                                <div class="card-link" onclick="window.open('https://www.linkedin.com/in/afra-pascual-almenara/')">
+                                    <i class="bi bi-linkedin"></i>
+                                    Perfil de linkedin
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+      <!-- ******************************************************* -->
+        <!-- Sección de calendario -->
+        <!-- muestra información de la temporalización del curso-->
+        <!-- ******************************************************* -->
+        <div id="profesores">
+            <div>
+            <div class="mb-4 text-center">
+                <div id="aria-calendario"class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Calendario</div>
+            </div>
+
+
+                
+                <div class="container">
+                    <p> Clase sincrónica en horario de 18:00h a 20:00h </p>
+                     <ul>
+                        <li><strong>Clase de bienvenida:</strong>  29 de septiembre, se celebrará la clase 0 para todos los alumnos del curso y módulos relacionados.</li>
+                        <li><strong>Módulo de Fundamentos: </strong> 2, 6, 9, 13 octubre</li>
+                        <li><strong>Módulo de Diseño:</strong>  20. 23, 27, 30 octubre y 3 de noviembre. </li>
+                        <li><strong>Módulo de Codificación: </strong> 10, 13, 17, 20, 24 noviembre </li>
+                        <li><strong>Módulo de Evaluación:</strong>  1, 4, 11, 15, 18 de diciembre </li>
+                        <li><strong>Sesión invitada: </strong> El día 22 de diciembre, habrá una sesión sobre la importancia de la accesibilidad por parte de una empresa relevante en el área de accesibilidad digital
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+<!-- VERSIÓN INACCESIBLE - Solo para demostración educativa -->
+
+<div id="matricula">
+    <div>
+        <div class="mb-4 text-center">
+            <div class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Matrícula</div>
+        </div>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 mb-3">
+
+                <!-- Card 1: Sin semántica -->
+                <div class="col-md-6">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3 bg-dark text-white">
+                            <div class="my-0 fw-normal">Microcredencial en Especialización en Accesibilidad Digital - Curso completo</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <span>Precio original:</span> <del>1.192 €</del><br>
+                                <div class="fs-4">Precio con bonificaciones:</div>
+                            </div>
+
+                            <div class="card-title pricing-card-title fs-1 text-center" style="color: #b0b0b0;">
+                                58 €
+                                <span class="text-body-secondary fw-light">/completo</span>
+                            </div>
+
+                            <div class="alert alert-secondary p-1" style="color: #c0c0c0; background-color: #f0f0f0;">
+                                ¡Ahorra 1.134 € en la matrícula con las Becas Santander y las Subvenciones Next Generation!
+                            </div>
+
+                            <div class="ms-2">
+                                <div class="mt-3 mb-4">
+                                    <div>
+                                        <span class="icono-decorativo">✓</span>
+                                        4 módulos
+                                    </div>
+                                    <div>
+                                        <span class="icono-decorativo">✓</span>
+                                        12 semanas
+                                    </div>
+                                    <div>
+                                        <span class="icono-decorativo">✓</span>
+                                        Clases síncronas
+                                    </div>
+                                    <div>
+                                        <span class="icono-decorativo">✓</span>
+                                        Certificado UdL
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="w-100 btn-custom-border text-center text-decoration-none" 
+                                 style="cursor: pointer; color: #a0a0a0; background-color: #d0d0d0;" 
+                                 onclick="window.location='http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=007I'">
+                                Preinscripción Curso Completo
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+
+                <!-- Card 2: Sin semántica -->
+                <div class="col-md-6">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3 bg-dark text-white">
+                            <div class="my-0 fw-normal">Cursar módulos de forma individual</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <span>Precio original:</span> <del>400 €</del><br>
+                                <div class="fs-4">Precio con bonificaciones:</div>
+                            </div>
+
+                            <div class="card-title pricing-card-title fs-1 text-center" style="color: #b0b0b0;">
+                                100 €
+                                <span class="text-body-secondary fw-light">/completo</span>
+                            </div>
+
+                            <div class="alert alert-secondary p-1" style="color: #c0c0c0; background-color: #f0f0f0;">
+                                ¡Ahorra 300 € en la matrícula con las Becas Santander!
+                            </div>
+
+                            <div class="ms-2">
+                                <div class="mt-3 mb-4">
+                                    <div>
+                                        <span class="icono-decorativo">✓</span>
+                                        1 módulo
+                                    </div>
+                                    <div>
+                                        <span class="icono-decorativo">✓</span>
+                                        3 semanas
+                                    </div>
+                                    <div>
+                                        <span class="icono-decorativo">✓</span>
+                                        Clases síncronas
+                                    </div>
+                                    <div>
+                                        <span class="icono-decorativo">✓</span>
+                                        Certificado UdL
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-100 btn-custom-border text-center text-decoration-none" 
+                                 style="cursor: pointer; color: #a0a0a0; background-color: #d0d0d0;" 
+                                 onclick="window.location='http://www.cfc.udl.cat/fc/avis/?idioma=es&codi=007I'">
+                                Preinscripción a un solo módulo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- VERSIÓN INACCESIBLE - Solo para demostración educativa -->
+
+<div id="testimonios">
+    <div>
+        <div class="mb-4 text-center">
+            <div class="display-5 fw-bold text-dark border-bottom border-3 pb-2" style="color: #999;">Testimonios</div>
+        </div>
+
+        <div class="my-5">
+            <div class="row g-4">
+                <!-- Testimonio 1 - Sin estructura semántica -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="card-text fst-italic" style="color: #aaa;">
+                                "Este curso me ha ayudado a comprender la accesibilidad digital de forma práctica y aplicable."
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center bg-white border-top-0">
+                            <!-- Imagen SIN alt -->
+                            <img src="img/alumno1.jpg" class="rounded-circle me-2" width="50" height="50">
+                            <div>
+                                <span style="color: #888;">Juan Pérez</span><br>
+                                <span style="color: #bbb;">Diseñador Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Testimonio 2 - Sin estructura semántica -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="card-text fst-italic" style="color: #aaa;">
+                                "Las prácticas con módulos y ejercicios de accesibilidad fueron muy útiles y bien guiadas."
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center bg-white border-top-0">
+                            <!-- Imagen SIN alt -->
+                            <img src="img/alumno2.jpg" class="rounded-circle me-2" width="50" height="50">
+                            <div>
+                                <span style="color: #888;">María López</span><br>
+                                <span style="color: #bbb;">Desarrolladora Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Testimonio 3 - Sin estructura semántica -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="card-text fst-italic" style="color: #aaa;">
+                                "El enfoque práctico y accesible del curso me permitió mejorar la UX de mis proyectos digitales."
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex align-items-center bg-white border-top-0">
+                            <!-- Imagen SIN alt -->
+                            <img src="img/alumno3.jpg" class="rounded-circle me-2" width="50" height="50">
+                            <div>
+                                <span style="color: #888;">Pedro Torres</span><br>
+                                <span style="color: #bbb;">UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- CONTACTO con formulario INACCESIBLE -->
+        <div id="contacto">
+            <div>
+                <div class="mb-4 text-center">
+                    <div class="display-5 fw-bold text-dark border-bottom border-3 pb-2">Contacto</div>
+                </div>
+
+                <div class="container">
+                    <div>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos.</div>
+
+                    <!-- FORMULARIO SIN LABELS ni estructura semántica -->
+                    <div class="formulario">
+                        <!-- Solo placeholders, SIN labels -->
+                        <input type="text" class="campo-entrada" placeholder="Nombre">
+                        <input type="email" class="campo-entrada" placeholder="Correo electrónico">
+                        <textarea class="campo-entrada" rows="4" placeholder="Mensaje"></textarea>
+                        <!-- Botón sin type="submit" ni aria-label -->
+                        <div class="btn-enviar" onclick="alert('Formulario enviado')">Enviar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER sin estructura semántica -->
+<!-- FOOTER INACCESIBLE - Solo para demostración educativa -->
+
+<div class="bg-body-tertiary text-dark">
+    <div class="container p-4">
+        <!-- Redes sociales sin semántica -->
+        <div class="mb-4 text-center">
+            <!-- Enlaces sin aria-label, solo iconos -->
+            <div class="text-dark p-3" style="display: inline-block; cursor: pointer; color: #bbb;" 
+                 onclick="window.location='#!'">
+                <i class="bi bi-youtube"></i>
+            </div>
+            <div class="text-dark p-3" style="display: inline-block; cursor: pointer; color: #bbb;" 
+                 onclick="window.location='#!'">
+                <i class="bi bi-github"></i>
+            </div>
+        </div>
+  
+        <!-- Formulario SIN labels ni estructura semántica -->
+        <div class="mb-5">
+            <div class="alert alert-warning" style="color: #c0c0c0; background-color: #f5f5f5;">
+                <div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto">
+                            <div class="pt-2" style="color: #999;">
+                                ¿Quieres estar informado de futuras ediciones del curso?
+                            </div>
+                        </div>
+            
+                        <div class="col-md-5 col-12">
+                            <!-- Input SIN label, solo placeholder -->
+                            <div class="form-outline mb-4">
+                                <input type="text" class="form-control" 
+                                       placeholder="Introduce tu correo electrónico" 
+                                       style="color: #aaa; border-color: #ddd;">
+                            </div>
+                        </div>
+            
+                        <div class="col-auto">
+                            <!-- Botón sin type="submit" -->
+                            <div class="btn-custom-border" 
+                                 style="cursor: pointer; color: #a0a0a0; background-color: #d5d5d5;"
+                                 onclick="alert('Enviado')">
+                                Enviar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+  
+        <!-- Links de navegación sin semántica -->
+        <div>
+            <div class="row">
+                <div class="col-lg-5 col-md-5 text-start ms-5 ps-5">
+                    <div class="text-uppercase" style="color: #aaa;">Navegación</div>
+
+                    <!-- Lista sin <ul> y <li> -->
+                    <div class="ms-2">
+                        <div class="lh-1">
+
+                            <div>
+                                <span style="color: #b0b0b0; cursor: pointer;" 
+                                      onclick="window.location='#programa'">Programa</span>
+                            </div>
+                            <div>
+                                <span style="color: #b0b0b0; cursor: pointer;" 
+                                      onclick="window.location='#profesores'">Profesores</span>
+                            </div>
+                            <div>
+                                <span style="color: #b0b0b0; cursor: pointer;" 
+                                      onclick="window.location='#calendario'">Calendario</span>
+                            </div>
+                            <div>
+                                <span style="color: #b0b0b0; cursor: pointer;" 
+                                      onclick="window.location='#matricula'">Matrícula</span>
+                            </div>
+                            <div>
+                                <span style="color: #b0b0b0; cursor: pointer;" 
+                                      onclick="window.location='#testimonios'">Testimonios</span>
+                            </div>
+                            <div>
+                                <span style="color: #b0b0b0; cursor: pointer;" 
+                                      onclick="window.location='#contacto'">Contacto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información de contacto -->
+                <div class="col-lg-5 col-md-5">
+                    <div class="ms-3 ps-3">
+                        <!-- Enlace sin aria-label -->
+                        <div class="btn btn-outline btn-floating m-1" 
+                             style="cursor: pointer;" 
+                             onclick="window.location='https://www.formaciocontinua.udl.cat/'">
+                            <!-- Imagen SIN alt -->
+                            <img class="d-block mx-auto mb-4" src="img/logo.jpg" width="102" height="57">
+                        </div> 
+                    </div>
+
+                    <div class="ms-4 ps-4">
+                        <!-- Sin <p> semántico, sin <strong> -->
+                        <div style="color: #888;">Universitat de Lleida</div>
+                        <div class="text-body-secondary" style="color: #bbb;">Centre de Formació Contínua</div>
+                        <div class="text-body-secondary" style="color: #bbb;">
+                            <i class="bi bi-geo-alt-fill" style="color: #ccc;"></i>
+                            Carrer de Pere de Cabrera, 5. 25001 Lleida.
+                        </div>
+                        <div class="text-body-secondary" style="color: #bbb;">
+                            <i class="bi bi-telephone-fill" style="color: #ccc;"></i>
+                            Teléfonos 973 703383 / 973 703382
+                        </div>
+                        <div>
+                            <i class="bi bi-envelope-fill" style="color: #ccc;"></i>
+                            <!-- Enlace sin aria-label -->
+                            <span class="text-body-secondary" style="color: #b0b0b0; cursor: pointer;"
+                                  onclick="window.location='mailto:cfc.formaciocontinua@udl.cat'">
+                                cfc.formaciocontinua@udl.cat
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright sin semántica -->
+    <div class="footer__bottom text-center" style="color: #999;">
+        <div>&copy; 2025
+            <span style="color: #aaa; cursor: pointer;" 
+                  onclick="window.location='https://www.udl.cat/ca/es/'">Universitat de Lleida</span>
+            Todos los derechos reservados.
+        </div>
+        <div>Web realizada por 
+            <span style="color: #aaa; cursor: pointer;" 
+                  onclick="window.location='mailto:afrikiudl@gmail.com'">Afriki</span>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
