@@ -313,7 +313,7 @@ footer {
     list-style-type: none;
 }
 
-
+/* tabla del calendario */
 .table-calendario {
     width: 100%;
     border-collapse: collapse;
@@ -327,10 +327,16 @@ footer {
     text-align: left;
   }
   
-  /* --- Versión móvil --- */
+  /* --- Versión móvil accesible --- */
   @media (max-width: 768px) {
+    .table-calendario {
+      border: 0;
+    }
+  
     .table-calendario thead {
-      display: none; /* oculta los encabezados */
+      position: absolute; /* lo mantiene en el DOM, pero fuera de pantalla */
+      top: -9999px;
+      left: -9999px;
     }
   
     .table-calendario tr {
@@ -338,10 +344,11 @@ footer {
       margin-bottom: 1rem;
       border: 1px solid #ddd;
       border-radius: 8px;
-      background-color: #fdfdfd;
+      background-color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
   
+    .table-calendario th[scope="row"],
     .table-calendario td {
       display: flex;
       justify-content: space-between;
@@ -351,14 +358,18 @@ footer {
       border-bottom: 1px solid #eee;
     }
   
-    .table-calendario td:last-child {
-      border-bottom: none;
-    }
-  
+    .table-calendario th[scope="row"]::before,
     .table-calendario td::before {
       content: attr(data-label);
       font-weight: bold;
       color: #333;
+      flex-basis: 50%;
+      text-align: left;
+    }
+  
+    .table-calendario td:last-child,
+    .table-calendario th[scope="row"]:last-child {
+      border-bottom: none;
     }
   }
   
