@@ -312,3 +312,53 @@ footer {
 #modulo1 ul, #modulo2 ul, #modulo3 ul, #modulo4 ul {
     list-style-type: none;
 }
+
+
+.table-calendario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+  
+  .table-calendario th,
+  .table-calendario td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  /* --- Versión móvil --- */
+  @media (max-width: 768px) {
+    .table-calendario thead {
+      display: none; /* oculta los encabezados */
+    }
+  
+    .table-calendario tr {
+      display: block;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fdfdfd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+  
+    .table-calendario td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .table-calendario td:last-child {
+      border-bottom: none;
+    }
+  
+    .table-calendario td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: #333;
+    }
+  }
+  
