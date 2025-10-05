@@ -372,4 +372,17 @@ footer {
       border-bottom: none;
     }
   }
+
+
+  /* cards de la matricula */
+
+  @media (max-width: 576px) {
+    .card-header h3 {
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+    .pricing-card-title {
+      font-size: 1.75rem;
+    }
+  }
   
