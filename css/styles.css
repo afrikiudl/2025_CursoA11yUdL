@@ -104,7 +104,7 @@ a:focus {
 
 
 /* Navegación */
-nav ul {
+.menuprincipal ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -112,7 +112,7 @@ nav ul {
     margin: 0;
 }
 
-nav li {
+.menuprincipal li {
     margin: 0 1rem;
 }
 
@@ -122,7 +122,7 @@ nav li {
     font-weight: bold;
 } */
 
-nav a {
+.menuprincipal a {
     border: 0;
     color: #005797;
     display: inline-block;
@@ -132,13 +132,13 @@ nav a {
     padding-top: 0.5625rem;
 }
 
-nav a:hover {
+.menuprincipal a:hover {
     /*color: #024488;*/
     color:#000 !important;
     background-color: #FADD4A;
 }
 
-nav a:focus {
+.menuprincipal a:focus {
     background-image: linear-gradient(to top, #000 3px, #f9dc4a 3px, #f9dc4a);
     background-color: #f9dc4a;
     color:#000 !important;
