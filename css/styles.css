@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    border: 1px soid red;
 }
 
 /*Permite establecer el grid en toda la página*/
@@ -41,14 +40,24 @@ footer { grid-area: footer; padding:1rem; }
 
 a {
     border: 0;
-    color: #005797;
+    /*color: #005797;*/
+    color: #003366;
     display: inline-block;
     margin-bottom: 1rem;
     margin-top: 0;
     padding-bottom: 0.5625rem;
     padding-top: 0.5625rem;
 }
-  
+ 
+.enlaceProfe a {
+  color: #003366;
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  padding-bottom: 0.5625rem;
+  padding-top: 0.5625rem;
+}
+
 a:hover {
     /*color: #325a81;*/
     color: #000;
@@ -124,7 +133,7 @@ a:focus {
 
 .menuprincipal a {
     border: 0;
-    color: #005797;
+    color: #003366;
     display: inline-block;
     margin-bottom: 1rem;
     margin-top: 0;

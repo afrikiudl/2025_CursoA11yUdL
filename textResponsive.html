@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo Bootstrap Responsive</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .demo-box {
+    border: 1px solid #999;
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .demo-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+</style>
+</head>
+<body class="p-3">
+
+<h2 class="mb-4 text-center">Demostración de clases y atributos Bootstrap</h2>
+
+<div class="container">
+  <div class="row g-3">
+    
+    <!-- Tipografía -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box fs-3 fs-md-2 fs-lg-1">
+        <div class="demo-title">Tipografía responsive</div>
+        fs-3 fs-md-2 fs-lg-1
+      </div>
+    </div>
+
+    <!-- Peso de fuente -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box fw-light">
+        <div class="demo-title">Peso de fuente light</div>
+        fw-light
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box fw-normal">
+        <div class="demo-title">Peso de fuente normal</div>
+        fw-normal
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box fw-bold">
+        <div class="demo-title">Peso de fuente bold</div>
+        fw-bold
+      </div>
+    </div>
+
+    <!-- Alineación de texto -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box text-center text-md-start text-lg-start">
+        <div class="demo-title">Alineación de texto</div>
+        Centrado en móvil, izquierda en escritorio
+      </div>
+    </div>
+
+    <!-- Visibilidad / display -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box d-none d-md-block">
+        <div class="demo-title">Visible solo tablet/escritorio</div>
+        d-none d-md-block
+      </div>
+    </div>
+
+    <!-- Columnas de grid -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="row demo-box">
+        <div class="col-12 col-md-6 col-lg-4 border p-1">Col adaptable</div>
+        <div class="col-12 col-md-6 col-lg-4 border p-1">Col adaptable</div>
+        <div class="col-12 col-md-6 col-lg-4 border p-1">Col adaptable</div>
+      </div>
+      <div class="demo-title mt-1">Columnas de grid</div>
+    </div>
+
+    <!-- Filas automáticas -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1 demo-box">
+        <div class="col border p-1">Fila auto 1</div>
+        <div class="col border p-1">Fila auto 2</div>
+        <div class="col border p-1">Fila auto 3</div>
+      </div>
+      <div class="demo-title mt-1">Filas automáticas</div>
+    </div>
+
+    <!-- Espaciado -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box p-2 p-md-4 mb-3 mb-lg-5">
+        <div class="demo-title">Espaciado responsive</div>
+        Padding/margen adaptable
+      </div>
+    </div>
+
+    <!-- Flexbox y alineación -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="d-flex justify-content-center justify-content-md-start demo-box">
+        <div class="demo-title">Flexbox y alineación</div>
+        Centrado en móvil, start en escritorio
+      </div>
+    </div>
+
+    <!-- Imagen responsiva -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-title">Imagen responsiva</div>
+      <img src="https://via.placeholder.com/150" class="img-fluid demo-box" alt="Imagen adaptable">
+    </div>
+
+    <!-- Botón responsive -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-title">Botón responsive</div>
+      <button class="btn btn-primary w-100 w-md-auto demo-box">Botón</button>
+    </div>
+
+    <!-- Tabla responsive -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-title">Tabla responsive</div>
+      <div class="table-responsive demo-box">
+        <table class="table table-bordered mb-0">
+          <tr><td>Dato 1</td><td>Dato 2</td><td>Dato 3</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Altura y anchura -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box h-100 w-50 w-md-25">
+        <div class="demo-title">Altura/Anchura</div>
+        h-100 w-50 w-md-25
+      </div>
+    </div>
+
+    <!-- Gaps -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-title">Espaciado de gaps</div>
+      <div class="d-flex gap-2 gap-md-4 demo-box">
+        <div class="p-1 border">1</div>
+        <div class="p-1 border">2</div>
+        <div class="p-1 border">3</div>
+      </div>
+    </div>
+
+    <!-- Visibilidad condicional -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-box d-block d-lg-none">
+        <div class="demo-title">Visible solo móvil</div>
+        d-block d-lg-none
+      </div>
+    </div>
+
+    <!-- Orden de elementos -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="demo-title">Orden de elementos</div>
+      <div class="row demo-box">
+        <div class="col order-2 order-md-1 border p-1">Orden 1 escritorio</div>
+        <div class="col order-1 order-md-2 border p-1">Orden 2 escritorio</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
